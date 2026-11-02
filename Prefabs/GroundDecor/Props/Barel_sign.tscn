@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Props/PAEA01_GroundDecor_Props_Barrel_01a_Fire.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Sign/PAEA01_GroundDecor_Sign_Cornice_01a.tscn" id="2"]
+
+[node name="Barel_sign" type="Node3D"]
+
+[node name="PAEA01_GroundDecor_Props_Barrel_01a_PRE2" parent="." instance=ExtResource("1")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, -0.222221, 0, 0)
+
+[node name="PAEA01_GroundDecor_Sign_Cornice_01a_PRE2" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.98261, -0.181611, 0.038672, 0.182092, 0.983238, -0.009286, -0.036337, 0.016167, 0.999209, -0.222221, 0, 0)
+
+[node name="PAEA01_GroundDecor_Sign_Cornice_01a_PRE2_2" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.936267, 0.350141, 0.028383, -0.349405, 0.936557, -0.027859, -0.036337, 0.016167, 0.999209, -0.454, 0, -0.107)
+
+[node name="PAEA01_GroundDecor_Sign_Cornice_01a_PRE2_3" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.936267, 0.350141, 0.028383, -0.349405, 0.936557, -0.027859, -0.036337, 0.016167, 0.999209, -0.442, 0, 0)
+
+[node name="PAEA01_GroundDecor_Sign_Cornice_01a_PRE2_4" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.99872, -0.034612, 0.036879, 0.03518, 0.99927, -0.014888, -0.036337, 0.016167, 0.999209, -0.222221, 0, 0)
+
+[node name="PAEA01_GroundDecor_Sign_Cornice_01a_PRE2_5" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.99872, -0.034612, 0.036879, 0.03518, 0.99927, -0.014888, -0.036337, 0.016167, 0.999209, 0.066, 0, 0)
+
+[node name="PAEA01_GroundDecor_Sign_Cornice_01a_PRE2_6" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.995809, 0.084558, 0.034845, -0.078678, 0.986302, -0.144973, -0.046627, 0.141624, 0.988822, -0.199, 0, -0.476)
+
+[node name="PAEA01_GroundDecor_Sign_Cornice_01a_PRE2_7" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.995809, 0.084558, 0.034845, -0.078678, 0.986302, -0.144973, -0.046627, 0.141624, 0.988822, -0.222221, 0, 0)
+
+[node name="PAEA01_GroundDecor_Sign_Cornice_01a_PRE2_8" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.98261, -0.181611, 0.038672, 0.182092, 0.983238, -0.009286, -0.036337, 0.016167, 0.999209, -0.222221, 0, 0)

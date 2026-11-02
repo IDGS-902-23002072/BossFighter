@@ -33,6 +33,22 @@ func _ready() -> void:
 	_setup_warning_material()
 	add_to_group("enemies")
 	add_to_group("bosses")
+
+	# Diseño visual del jefe según su tipo.
+	var mesh := get_node_or_null("MeshInstance3D") as MeshInstance3D
+	if mesh:
+		var mat := StandardMaterial3D.new()
+		match boss_type:
+			BossType.GUERRERO:
+				mat.albedo_color = Color(0.3, 0.6, 0.25)
+			BossType.ASESINO:
+				mat.albedo_color = Color(0.8, 0.85, 0.9, 0.8)
+				mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+			BossType.DESTRUCTOR:
+				mat.albedo_color = Color(0.5, 0.15, 0.15)
+		mat.emission_enabled = true
+		mat.emission = mat.albedo_color * 0.3
+		mesh.material_override = mat
 	health.died.connect(_on_died)
 
 	player = get_tree().get_first_node_in_group("player") as CharacterBody3D
@@ -40,28 +56,28 @@ func _ready() -> void:
 func _configure_boss() -> void:
 	match boss_type:
 		BossType.GUERRERO:
-			speed = 3.0
-			attack_damage = 15.0
-			attack_range = 2.0
-			windup_time = 0.8
-			cooldown_time = 1.2
-			health.max_health = 100.0
+			speed = 2.6
+			attack_damage = 12.0
+			attack_range = 1.9
+			windup_time = 0.9
+			cooldown_time = 1.4
+			health.max_health = 80.0
 
 		BossType.ASESINO:
-			speed = 4.5
-			attack_damage = 20.0
-			attack_range = 2.2
-			windup_time = 0.5
-			cooldown_time = 0.8
-			health.max_health = 150.0
+			speed = 3.8
+			attack_damage = 16.0
+			attack_range = 2.0
+			windup_time = 0.6
+			cooldown_time = 1.0
+			health.max_health = 120.0
 
 		BossType.DESTRUCTOR:
-			speed = 3.5
-			attack_damage = 30.0
-			attack_range = 3.0
-			windup_time = 0.7
-			cooldown_time = 0.6
-			health.max_health = 250.0
+			speed = 3.0
+			attack_damage = 22.0
+			attack_range = 2.8
+			windup_time = 0.8
+			cooldown_time = 0.8
+			health.max_health = 180.0
 
 	health.current_health = health.max_health
 	health.health_changed.emit(health.current_health, health.max_health)
@@ -199,4 +215,6 @@ func _try_damage_player(max_distance: float, damage: float) -> void:
 func _on_died() -> void:
 	print("¡Jefe derrotado!")
 	_set_attack_warning(false)
+	if has_node("/root/SoundManager"):
+		get_node("/root/SoundManager").play_tone(220.0, 0.35, -4.0)
 	queue_free()

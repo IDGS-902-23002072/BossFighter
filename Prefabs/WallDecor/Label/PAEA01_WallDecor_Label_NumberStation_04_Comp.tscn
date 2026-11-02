@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Label/PAEA01_WallDecor_Label_NumberPlace_01a.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Label/PAEA01_WallDecor_Label_NumberStation_04.tscn" id="2"]
+
+[node name="PAEA01_WallDecor_Label_NumberStation_04_Comp" type="Node3D"]
+
+[node name="PAEA01_WallDecor_Label_NumberPlace_01a_PRE (14)" parent="." instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0.000003, 0, 1, -0, -0.000003, 0, -1, -7.379997, 4.319543, 0.137001)
+
+[node name="PAEA01_WallDecor_Label_NumberPlace_01a_PRE (13)" parent="." instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0.000003, 0, 1, -0, -0.000003, 0, -1, 6.599998, 4.319543, 0.137001)
+
+[node name="PAEA01_WallDecor_Label_NumberStation_04_PRE2 (2)" parent="." instance=ExtResource("2")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, -7.344002, 4.687443, 0)
+
+[node name="PAEA01_WallDecor_Label_NumberStation_04_PRE2 (3)" parent="." instance=ExtResource("2")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 6.709999, 4.687443, 0)

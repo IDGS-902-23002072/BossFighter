@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Prefabs/Ground/WorksPlace/PAEA01_Ground_WorksPlace_Bridge_01c.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Prefabs/Fence/pole/PAEA01_Fence_pole_01a.tscn" id="2"]
+
+[node name="PAEA01_Ground_WorksPlace_Bridge_accident_01a" type="Node3D"]
+
+[node name="PAEA01_Ground_WorksPlace_Bridge_01c_PRE" parent="." instance=ExtResource("1")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, -0.41008, 0.08, 3.513157)
+
+[node name="PAEA01_Fence_pole_01a" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.045404, -0.996543, -0.069577, 0.911504, 0.069828, -0.40532, 0.408777, -0.045016, 0.911523, 0.410088, -0.08, -3.513157)

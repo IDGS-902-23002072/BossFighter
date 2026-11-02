@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_RoofDecor_Light_neon_01.glb" id="1"]
+
+[node name="PAEA01_RoofDecor_Light_neon_01" type="Node3D"]
+
+[node name="PAEA01_RoofDecor_Light_neon_01" parent="." instance=ExtResource("1")]
+
+[node name="Point Light" type="OmniLight3D" parent="."]
+transform = Transform3D(-1, 0, -0.000006, 0, 1, 0, 0.000006, -0, -1, -0.24, -4.15, 0.62)
+light_color = Color(0.992224, 1, 0.570755, 1)
+light_energy = 6.31
+light_specular = 0.25
+shadow_enabled = true
+shadow_bias = 0.03
+shadow_normal_bias = 0.6
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+distance_fade_shadow = 60.0
+distance_fade_length = 15.0
+omni_range = 10
+omni_attenuation = 1.0

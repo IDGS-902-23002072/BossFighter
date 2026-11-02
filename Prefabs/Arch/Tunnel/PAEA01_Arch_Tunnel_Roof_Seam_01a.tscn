@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_Arch_Tunnel_Roof_Seam_01a.glb" id="1"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Light/PAEA01_WallDecor_Light_neon_01f.tscn" id="2"]
+
+[node name="PAEA01_Arch_Tunel_Roof_Seam_01a" type="Node3D"]
+
+[node name="PAEA01_Arch_Tunel_Roof_Seam_01a" parent="." instance=ExtResource("1")]
+
+[node name="Point Light (8)" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, -0, 1, 0.000004, 0, -0.000004, 1, -0.690002, 1.770029, 8.849996)
+light_color = Color(1, 0.942445, 0, 1)
+light_energy = 1.4
+light_specular = 0.25
+shadow_enabled = false
+omni_range = 8.99
+omni_attenuation = 1.0
+
+[node name="Point Light (9)" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, -0, 1, 0.000004, 0, -0.000004, 1, -0.690002, 1.769966, -9.150007)
+light_color = Color(1, 0.942445, 0, 1)
+light_energy = 1.4
+light_specular = 0.25
+shadow_enabled = false
+omni_range = 8.99
+omni_attenuation = 1.0
+
+[node name="Point Light (7)" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, -0, 1, 0.000004, 0, -0.000004, 1, -0.690002, 19.767002, -0.26007)
+light_color = Color(1, 0.942445, 0, 1)
+light_energy = 1.4
+light_specular = 0.25
+shadow_enabled = false
+omni_range = 8.99
+omni_attenuation = 1.0
+
+[node name="PAEA01_WallDecor_Light_neon_01f_PRE2 (1)" parent="." instance=ExtResource("2")]
+transform = Transform3D(1, -0.000006, 0.000001, 0.000001, 0.000004, -1, 0.000006, 1, 0.000004, -0.628006, 20.207, -0.270071)

@@ -27,3 +27,12 @@ mesh = SubResource("CapsuleMesh_pg0n5")
 
 [node name="HealthComponent" type="Node" parent="." unique_id=1171227598]
 script = ExtResource("2_yewv4")
+max_health = 150.0
+
+[node name="Head" type="Node3D" parent="." unique_id=7770000]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="CameraFPS" type="Camera3D" parent="Head" unique_id=7770001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+current = false
+fov = 80.0

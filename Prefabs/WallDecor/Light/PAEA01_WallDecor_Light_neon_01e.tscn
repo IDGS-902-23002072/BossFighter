@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_WallDecor_Light_neon_01e.glb" id="1"]
+
+[node name="PAEA01_WallDecor_Light_neon_01e" type="Node3D"]
+
+[node name="PAEA01_WallDecor_Light_neon_01e" parent="." instance=ExtResource("1")]
+
+[node name="Point Light" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0.55)
+light_color = Color(1, 0, 0.019001, 1)
+light_energy = 2.49
+light_specular = 0.25
+shadow_enabled = false
+omni_range = 10
+omni_attenuation = 1.0

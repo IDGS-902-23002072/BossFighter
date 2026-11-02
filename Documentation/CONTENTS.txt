@@ -1,0 +1,45 @@
+CONTENTS -- Cemetery Statue
+Maciej EmacEArt
+================================================================
+
+OBJECT SCENES (total: 88)
+  Prefabs/Characters/Column/Statue (6)
+  Prefabs/Characters/Gargoyle/Clean (2)
+  Prefabs/Characters/Gargoyle/Dirt (2)
+  Prefabs/Characters/Gargoyle/Moss (2)
+  Prefabs/Characters/Statue/Clean (16)
+  Prefabs/Characters/Statue/Comp (2)
+  Prefabs/Characters/Statue/Dirt (16)
+  Prefabs/Characters/Statue/Hooded (6)
+  Prefabs/Characters/Statue/Moss (16)
+  Prefabs/Characters/Statue/SkullBearer (6)
+  Prefabs/Exterior/Fence/Element (3)
+  Prefabs/Props/Column (2)
+  Prefabs/Props/Gravestone/Crows (6)
+  Prefabs/Props/Pedestal/JackOLantern (3)
+
+ASSETS
+  Textures (.png):        3
+  Meshes (.mesh):         150
+  Materials (.material):  56
+  Source models:          50 .gltf + 50 .bin, one .bin per model.
+                          They use the shared palette from Textures/,
+                          so the texture file is not repeated inside them.
+  Demo scenes:            1
+
+EVERY FILE IN THE PACK
+  Object scenes (.scn)        88
+  Demo scene (.scn)            1
+  Meshes (.mesh)             150
+  Materials (.material)       56
+  Textures (.png)              3
+  Source models (.gltf)       50
+  Model data files (.bin)     50
+  Readme, contents, licence    5
+  Godot import settings        4
+  project.godot                1
+  icon.svg                     1
+                            ----
+TOTAL FILES IN PACK:         409
+
+================================================================

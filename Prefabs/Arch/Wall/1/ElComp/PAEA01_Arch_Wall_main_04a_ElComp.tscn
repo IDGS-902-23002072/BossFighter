@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_Arch_Wall_main_01b.glb" id="1"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Electric/PAEA01_WallDecor_Electric_Box_01a.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Electric/PAEA01_WallDecor_Pipe_Ground_02b.tscn" id="3"]
+
+[node name="PAEA01_Arch_Wall_main_04a_ElComp" type="Node3D"]
+
+[node name="PAEA01_Arch_Wall_main_01b" parent="." instance=ExtResource("1")]
+
+[node name="CollisionShape3D" parent="PAEA01_Arch_Wall_main_01b/PAEA01_Arch_Wall_main_01b/StaticBody3D" index="0"]
+disabled = true
+
+[node name="PAEA01_WallDecor_Electric_Box_01a_PRE2 (1)" parent="." instance=ExtResource("2")]
+transform = Transform3D(-0.000009, 0, -1, -0, 1, 0, 1, 0, -0.000009, -4.209997, 4.864039, -0.312029)
+
+[node name="PAEA01_WallDecor_Pipe_Ground_02b_PRE2" parent="." instance=ExtResource("3")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, -4.58, 5.32004, 1.069973)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=1 format=3]
+
+
+[node name="PAEA01_Ground_Stairs_BackUp_01a" type="Node3D"]
+
+[node name="Light" type="OmniLight3D" parent="."]
+light_color = Color(0.383019, 0.660377, 0.224528, 1)
+light_energy = 13.168
+light_specular = 0.25
+shadow_enabled = true
+shadow_bias = 0.03
+shadow_normal_bias = 0.6
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+distance_fade_shadow = 60.0
+distance_fade_length = 15.0
+omni_range = 10
+omni_attenuation = 1.0

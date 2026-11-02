@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_RoofDecor_LCD_Exit_01a.001.glb" id="1"]
+
+[node name="PAEA01_RoofDecor_LCD_Exit_01a_001" instance=ExtResource("1")]

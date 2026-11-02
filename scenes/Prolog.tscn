@@ -1,0 +1,821 @@
+[gd_scene load_steps=60 format=3]
+
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Pipe/PAEA01_WallDecor_Pipe_Seam_01b.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Rubbish/PAEA01_GroundDecor_Rubbish_Cygaro_01a.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Pipe/PAEA01_WallDecor_Pipe_RoundSide_01a.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Prefabs/Ground/Roof/Blue/PAEA01_Ground_Roof_Seam_01a.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Props/PAEA01_GroundDecor_Props_WallBox_01b.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Pipe/PAEA01_WallDecor_Pipe_Seam_02corner.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Prefabs/Ground/Roof/Blue/PAEA01_Ground_Roof_EntryHath_01a.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Crate/PAEA01_WallDecor_Crate_01a.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Electric/PAEA01_WallDecor_Electric_BoxFront_01a.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Rubbish/PAEA01_GroundDecor_Rubbish_Package_01a.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://Prefabs/TechRoom/Arch/PAEA01_Arch_Tunnel_TechRoom_Enter_01a.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Props/PAEA01_GroundDecor_Gate_02d.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_Arch_staircase_01a.glb" id="13"]
+[ext_resource type="PackedScene" path="res://Prefabs/RoofDecor/Pipe/PAEA01_RoofDecor_Pipe_03a.tscn" id="14"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Electric/PAEA01_WallDecor_Pipe_Main_02c.tscn" id="15"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Light/PAEA01_WallDecor_Light_neon_01d.tscn" id="16"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Rubbish/PAEA01_GroundDecor_Rubbish_Package_01b.tscn" id="17"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Props/PAEA01_GroundDecor_Props_Box_T2_01b.tscn" id="18"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Props/PAEA01_GroundDecor_Props_Box_T2_01a.tscn" id="19"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Cock/PAEA01_WallDecor_Cock_01a.tscn" id="20"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Rubbish/PAEA01_GroundDecor_Rubbish_Package_01d.tscn" id="21"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Pipe/PAEA01_WallDecor_Pipe_RoundSide_02b.tscn" id="22"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Electric/PAEA01_WallDecor_Electric_Box_01c.tscn" id="23"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Rubbish/PAEA01_GroundDecor_Rubbish_Cygaro_01c.tscn" id="24"]
+[ext_resource type="PackedScene" path="res://Prefabs/TechRoom/Props/PAEA01_TechRoom_Props_Cable_01b.tscn" id="25"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Rubbish/PAEA01_GroundDecor_Rubbish_hatch_01a.tscn" id="26"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Rubbish/PAEA01_GroundDecor_Rubbish_Cygaro_01b.tscn" id="27"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Wall/PAEA01_GroundDecor_Wall_broken_01a.tscn" id="28"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Electric/PAEA01_WallDecor_Pipe_Main_03a.tscn" id="29"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Rubbish/PAEA01_GroundDecor_Rubbish_cap_01a.tscn" id="30"]
+[ext_resource type="PackedScene" path="res://Prefabs/TechRoom/euroPalet/PAEA01_TechRoom_euroPalet_01b.tscn" id="31"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Electric/PAEA01_WallDecor_Electric_Box_01a.tscn" id="32"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Pipe/PAEA01_WallDecor_Pipe_Main_03b.tscn" id="33"]
+[ext_resource type="PackedScene" path="res://Prefabs/Ground/WorksPlace/PAEA01_Ground_WorksPlace_Ladder_02a.tscn" id="34"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Pipe/PAEA01_WallDecor_Pipe_Corner_01a.tscn" id="35"]
+[ext_resource type="PackedScene" path="res://Prefabs/TechRoom/Props/PAEA01_TechRoom_Props_plank_01a.tscn" id="36"]
+[ext_resource type="PackedScene" path="res://Prefabs/Arch/Wall/FPS/Wall/2/PAEA01_FPS_Wall_Tunnel_01a.tscn" id="37"]
+[ext_resource type="PackedScene" path="res://Prefabs/Arch/Tunnel/Exodus/PAEA01_Arch_Tunnel_Roof_Seam_Exodus_01a.tscn" id="38"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Destruction/PAEA01_WallDecor_Destruction_01a.tscn" id="39"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Electric/PAEA01_WallDecor_Electric_CableBox_01a.tscn" id="40"]
+[ext_resource type="PackedScene" path="res://Prefabs/Arch/Column/PAEA01_Arch_Wall_Column_01a.tscn" id="41"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Props/PAEA01_WallDecor_Props_mill.tscn" id="42"]
+[ext_resource type="PackedScene" path="res://Prefabs/Arch/Wall/FPS/Wall/PAEA01_FPS_Wall_Main_01b.tscn" id="43"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Electric/PAEA01_WallDecor_Pipe_Front_02a.tscn" id="44"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Electric/PAEA01_WallDecor_Electric_Box_01b.tscn" id="45"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Entry/PAEA01_WallDecor_Entry_Door_01c.tscn" id="46"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Pipe/PAEA01_WallDecor_Pipe_Seam_01d.tscn" id="47"]
+[ext_resource type="PackedScene" path="res://Prefabs/Arch/Wall/FPS/Wall/PAEA01_FPS_Wall_Main_Door_01a.tscn" id="48"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Cock/PAEA01_WallDecor_Cock_01b.tscn" id="49"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Props/PAEA01_GroundDecor_Props_Box_01a.tscn" id="50"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Rubbish/PAEA01_GroundDecor_Rubbish_cap_01b_001.tscn" id="51"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Wall/PAEA01_GroundDecor_Wall_broken_01b.tscn" id="52"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Wall/PAEA01_GroundDecor_Wall_broken_01c.tscn" id="53"]
+[ext_resource type="Shader" path="res://Shaders/vignette.gdshader" id="vig"]
+
+[sub_resource type="Environment" id="Env_1"]
+background_mode = 1
+background_color = Color(0.2531, 0.3173, 0.4434, 1)
+ambient_light_source = 2
+ambient_light_color = Color(1.0, 1.0, 1.0, 1)
+ambient_light_energy = 1.0
+ambient_light_sky_contribution = 0.0
+tonemap_mode = 0
+tonemap_exposure = 1.0
+tonemap_white = 6.0
+ssao_enabled = true
+ssao_radius = 1.6
+ssao_intensity = 2.7
+ssao_power = 2.2
+ssao_detail = 0.6
+ssao_light_affect = 0.15
+glow_enabled = false
+glow_normalized = true
+glow_intensity = 0.0
+glow_strength = 1.0
+glow_bloom = 0.2
+glow_blend_mode = 1
+glow_hdr_threshold = 0.95
+glow_hdr_scale = 2.0
+fog_enabled = true
+fog_mode = 0
+fog_light_color = Color(0.2531, 0.3173, 0.4434, 1)
+fog_light_energy = 1.0
+fog_density = 0.012
+fog_sky_affect = 0.0
+volumetric_fog_enabled = false
+volumetric_fog_density = 0.0047
+volumetric_fog_albedo = Color(0.0, 0.5437, 0.5454, 1)
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_length = 64.0
+adjustment_enabled = true
+adjustment_brightness = 1.0
+adjustment_contrast = 1.0
+adjustment_saturation = 1.0
+
+[sub_resource type="CameraAttributesPractical" id="CamAttr_1"]
+dof_blur_amount = 0.05
+
+[sub_resource type="ShaderMaterial" id="VigMat_1"]
+shader = ExtResource("vig")
+shader_parameter/strength = 0.62
+shader_parameter/radius = 0.45
+shader_parameter/softness = 0.55
+
+[node name="Prolog" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Env_1")
+camera_attributes = SubResource("CamAttr_1")
+
+[node name="DemoCamera" type="Camera3D" parent="."]
+transform = Transform3D(-0.976187, 0, 0.21693, 0.0156454, 0.997396, 0.0704044, -0.216366, 0.0721218, -0.973645, 12, 9, 96)
+fov = 50
+near = 0.1
+far = 400.0
+current = true
+
+[node name="Vignette" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="Vignette"]
+material = SubResource("VigMat_1")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="__EA_SYSTEM__" type="Node3D" parent="."]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="Lighting" type="Node3D" parent="__EA_SYSTEM__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="Area Light - start game" type="Node3D" parent="__EA_SYSTEM__/Lighting"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="Area Light - start game (1)" type="Node3D" parent="__EA_SYSTEM__/Lighting/Area Light - start game"]
+transform = Transform3D(1, 0, 0, 0, -0, -1.000001, 0, 1.000001, -0, 6.875211, 17.653751, 151.92)
+
+[node name="Area Light - start game (2)" type="Node3D" parent="__EA_SYSTEM__/Lighting/Area Light - start game"]
+transform = Transform3D(1, 0, 0, 0, -0, -1.000001, 0, 1.000001, -0, 6.875211, 17.653751, 134.06999)
+
+[node name="Area Light - start game" type="Node3D" parent="__EA_SYSTEM__/Lighting/Area Light - start game"]
+transform = Transform3D(1, 0, 0, 0, -0, -1.000001, 0, 1.000001, -0, 6.875211, 17.653751, 181.54999)
+
+[node name="Area Light - start game (3)" type="Node3D" parent="__EA_SYSTEM__/Lighting/Area Light - start game"]
+transform = Transform3D(0, -1.000001, 0, 0, -0, -1.000001, 1, 0, -0, 20.04, 17.653751, 129.41)
+
+[node name="Point Light" type="Node3D" parent="__EA_SYSTEM__/Lighting"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="Point Light (1)" type="OmniLight3D" parent="__EA_SYSTEM__/Lighting/Point Light"]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 6.635579, 10.431, 181.94382)
+light_color = Color(0, 0.57831, 1, 1)
+light_energy = 0.969
+light_specular = 0.25
+shadow_enabled = true
+shadow_bias = 0.03
+shadow_normal_bias = 0.6
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+distance_fade_shadow = 60.0
+distance_fade_length = 15.0
+omni_range = 10
+omni_attenuation = 2.0
+
+[node name="Point Light (5)" type="OmniLight3D" parent="__EA_SYSTEM__/Lighting/Point Light"]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 11.679585, 14.613297, 129.9)
+light_color = Color(0, 0.57831, 1, 1)
+light_energy = 0.969
+light_specular = 0.25
+shadow_enabled = true
+shadow_bias = 0.03
+shadow_normal_bias = 0.6
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+distance_fade_shadow = 60.0
+distance_fade_length = 15.0
+omni_range = 10
+omni_attenuation = 2.0
+
+[node name="Point Light (4)" type="OmniLight3D" parent="__EA_SYSTEM__/Lighting/Point Light"]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 7.055585, 15.299801, 186.51979)
+light_color = Color(0, 0.57831, 1, 1)
+light_energy = 4.746
+light_specular = 0.25
+shadow_enabled = true
+shadow_bias = 0.03
+shadow_normal_bias = 0.6
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+distance_fade_shadow = 60.0
+distance_fade_length = 15.0
+omni_range = 9.8
+omni_attenuation = 2.0
+
+[node name="Point Light (3)" type="OmniLight3D" parent="__EA_SYSTEM__/Lighting/Point Light"]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 2.228581, 10.431, 186.09383)
+light_color = Color(0, 0.57831, 1, 1)
+light_energy = 0.969
+light_specular = 0.25
+shadow_enabled = true
+shadow_bias = 0.03
+shadow_normal_bias = 0.6
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+distance_fade_shadow = 60.0
+distance_fade_length = 15.0
+omni_range = 10
+omni_attenuation = 2.0
+
+[node name="Point Light (2)" type="OmniLight3D" parent="__EA_SYSTEM__/Lighting/Point Light"]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 11.679585, 10.431, 186.09383)
+light_color = Color(0, 0.57831, 1, 1)
+light_energy = 0.969
+light_specular = 0.25
+shadow_enabled = true
+shadow_bias = 0.03
+shadow_normal_bias = 0.6
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+distance_fade_shadow = 60.0
+distance_fade_length = 15.0
+omni_range = 10
+omni_attenuation = 2.0
+
+[node name="Point Light" type="OmniLight3D" parent="__EA_SYSTEM__/Lighting/Point Light"]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 6.635579, 10.431, 190.93182)
+light_color = Color(0, 0.57831, 1, 1)
+light_energy = 0.969
+light_specular = 0.25
+shadow_enabled = true
+shadow_bias = 0.03
+shadow_normal_bias = 0.6
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+distance_fade_shadow = 60.0
+distance_fade_length = 15.0
+omni_range = 10
+omni_attenuation = 2.0
+
+[node name="__EA_ART__" type="Node3D" parent="."]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Pipe_Seam_01b_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Pipe_Seam_01b_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Pipe_Seam_01b_PRE2" instance=ExtResource("1")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 6.879582, 10.17, 190.82382)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01a_PRE2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Cygaro_01a_PRE2" instance=ExtResource("2")]
+transform = Transform3D(0, -1, 0, -0.351752, 0, 0.936093, -0.936093, 0, -0.351752, 6.955586, 10.055, 182.45082)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01a_PRE2 (1)" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Cygaro_01a_PRE2" instance=ExtResource("2")]
+transform = Transform3D(-0.219712, 0.972066, -0.08256, -0.351752, -0, 0.936094, 0.909945, 0.234712, 0.341925, 3.49793, 10.055, 183.95499)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01a_PRE2_2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Cygaro_01a_PRE2" instance=ExtResource("2")]
+transform = Transform3D(0.611423, 0, 0.950047, 0, 1.12979, -0, -0.950047, 0, 0.611423, 9.291331, 9.895826, 150.84947)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01a_PRE2 (1)_2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Cygaro_01a_PRE2" instance=ExtResource("2")]
+transform = Transform3D(-0.308483, -0.748245, 0, -0.000001, 0, 0.809341, -0.748245, 0.308483, -0.000001, 22.257328, 0.11, 129.36786)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01a_PRE2_3" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Cygaro_01a_PRE2" instance=ExtResource("2")]
+transform = Transform3D(0, 0.000006, -1, 0.000006, 1, 0.000006, 1, -0.000006, 0, 24.565, 0.1177, 130.737)
+
+[node name="PAEA01_WallDecor_Pipe_RoundSide_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Pipe_RoundSide_01a_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Pipe_RoundSide_01a_PRE2" instance=ExtResource("3")]
+transform = Transform3D(0.011803, 0, -1.252245, 0, 1.2523, 0, 1.252245, -0, 0.011803, 11.716588, 15.824, 181.83981)
+
+[node name="PAEA01_WallDecor_Pipe_RoundSide_01a_PRE2_2" parent="__EA_ART__/PAEA01_WallDecor_Pipe_RoundSide_01a_PRE2" instance=ExtResource("3")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 17.805, 2.436, 126.877)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (9)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(-1, -0.000001, 0.000002, -0.000001, 1, 0, -0.000002, -0, -1, 6.93425, 9.957298, 176.403)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (31)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(-1, 0.000001, -0, -0.000001, -1, -0, -0, -0, 1, 17.031906, 17.906698, 126.40199)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (34)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(-0.000001, -1, -0, 1, -0.000001, 0, -0, -0, 1, 27.031906, 13.271897, 136.402)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (27)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(-1.0654, 0.000001, -0, -0.000001, -1, -0, -0.000001, -0, 1, 6.947907, 17.906698, 146.402)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (26)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(-1.0654, 0.000001, -0, -0.000001, -1, -0, -0.000001, -0, 1, 6.947907, 17.906698, 156.402)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (33)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(-1, 0.000001, -0, -0.000001, -1, -0, -0, -0, 1, 27.031906, 17.906698, 126.40199)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (29)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(-1, 0.000001, -0, -0.000001, -1, -0, -0, -0, 1, 7.028467, 17.906698, 126.40199)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (28)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(-1, 0.000001, -0, -0.000001, -1, -0, -0, -0, 1, 7.028467, 17.906698, 136.402)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (11)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(1, 0.000001, -0.000001, -0.000001, 1, 0, 0.000001, 0, 1, 6.934145, 9.906768, 146.402)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (30)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(-1, 0.000001, -0, -0.000001, -1, -0, -0, -0, 1, 17.031906, 17.906698, 136.402)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (34)_2" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(-5.380972, 0.000003, -0.000002, 0.000003, -0.000001, -3.993002, -0.000004, -3.993002, 0.000001, 47.80303, 11.87659, 163.11679)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (24)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(1, -0.000001, 0.000001, -0.000001, -1, -0, 0.000001, 0, -1, 7.12275, 17.906797, 186.40326)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (32)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(-1, 0.000001, -0, -0.000001, -1, -0, -0, -0, 1, 27.031906, 17.906698, 136.402)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (36)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(5.380976, -0.000001, 0.000002, 0.000003, -0.000001, -3.993004, 0.000001, 3.993004, -0.000001, 47.80303, 11.87659, 90.69678)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (25)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(1, -0.000001, 0.000001, -0.000001, -1, -0, 0.000001, 0, -1, 7.122762, 17.906797, 176.40335)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (10)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(1, 0.000001, -0.000001, -0.000001, 1, 0, 0.000001, 0, 1, 6.934145, 9.906768, 156.402)
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (35)" parent="__EA_ART__/PAEA01_Ground_Roof_Seam_01a_PRE2" instance=ExtResource("4")]
+transform = Transform3D(-0.000001, -1.000001, -0, 1.000001, -0.000001, 0, -0, -0, 1, 27.031906, 13.271897, 126.40199)
+
+[node name="PAEA01_GroundDecor_Props_WallBox_01b" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Props_WallBox_01b_PRE" parent="__EA_ART__/PAEA01_GroundDecor_Props_WallBox_01b" instance=ExtResource("5")]
+transform = Transform3D(-0.999966, 0, 0.008354, 0, 1, -0, -0.008354, 0, -0.999966, 22.042, 0, 124.98626)
+
+[node name="PAEA01_WallDecor_Pipe_Seam_02corner" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Pipe_Seam_02corner_PRE" parent="__EA_ART__/PAEA01_WallDecor_Pipe_Seam_02corner" instance=ExtResource("6")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 0.97524, 6.610585, 16.823, 190.26083)
+
+[node name="PAEA01_Ground_Roof_EntryHath_01a" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_Ground_Roof_EntryHath_01a_PRE (1)" parent="__EA_ART__/PAEA01_Ground_Roof_EntryHath_01a" instance=ExtResource("7")]
+transform = Transform3D(-1, 0, 0, 0, 1, -0.000001, -0, -0.000001, -1, 6.93423, 9.906797, 186.40324)
+
+[node name="PAEA01_WallDecor_Crate_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Crate_01a_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Crate_01a_PRE2" instance=ExtResource("8")]
+transform = Transform3D(0, -0, 1.000001, 0, 1, 0, -1.000001, 0, 0, 4.323, 5.11, 128.77)
+
+[node name="PAEA01_WallDecor_Electric_BoxFront_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Electric_BoxFront_01a_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Electric_BoxFront_01a_PRE2" instance=ExtResource("9")]
+transform = Transform3D(-0.009424, 0, 0.999956, 0, 1, -0, -0.999956, 0, -0.009424, 1.741582, 15.094, 187.92883)
+
+[node name="PAEA01_GroundDecor_Rubbish_Package_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Rubbish_Package_01a_PRE2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Package_01a_PRE2" instance=ExtResource("10")]
+transform = Transform3D(-1.168934, 0, -0.092754, 0, 1.172607, 0, 0.092754, -0, -1.168934, 2.855013, 9.906774, 153.58731)
+
+[node name="PAEA01_GroundDecor_Rubbish_Package_01a_PRE2 (1)" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Package_01a_PRE2" instance=ExtResource("10")]
+transform = Transform3D(-0.830261, 0, 0.736186, 0, 1.109641, -0, -0.736186, 0, -0.830261, 10.92808, 9.906763, 150.4962)
+
+[node name="PAEA01_Arch_Tunel_TechRoom Enter_01a" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_Arch_Tunel_TechRoom Enter_01a" parent="__EA_ART__/PAEA01_Arch_Tunel_TechRoom Enter_01a" instance=ExtResource("11")]
+transform = Transform3D(-0, -0, 1.000001, 0, 1, 0, -1.000001, 0, -0, 47.41192, -4.891102, 128.422)
+
+[node name="PAEA01_GroundDecor_Gate_02d" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Gate_02d_PRE (1)" parent="__EA_ART__/PAEA01_GroundDecor_Gate_02d" instance=ExtResource("12")]
+transform = Transform3D(0, 0, -1, -1, 0, -0, 0, 1, 0, 2.16, 12.33, 143.81)
+
+[node name="PAEA01_GroundDecor_Gate_02d_PRE" parent="__EA_ART__/PAEA01_GroundDecor_Gate_02d" instance=ExtResource("12")]
+transform = Transform3D(0, 0, -1, -1, 0, -0, 0, 1, 0, 2.16, 12.33, 151.97711)
+
+[node name="PAEA01_Arch_staircase_01a" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_Arch_staircase_01a" parent="__EA_ART__/PAEA01_Arch_staircase_01a" instance=ExtResource("13")]
+transform = Transform3D(-1, -0, 0.000001, 0, 1, 0, -0.000001, 0, -1, 22.75, 0.11, 129.25)
+
+[node name="PAEA01_RoofDecor_Pipe_03a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_RoofDecor_Pipe_03a_PRE2 (3)" parent="__EA_ART__/PAEA01_RoofDecor_Pipe_03a_PRE2" instance=ExtResource("14")]
+transform = Transform3D(0.009421, 0.000004, 0.999955, 0, 1, -0.000004, -0.999955, 0, 0.009421, 7.9038, 17.97, 146.48999)
+
+[node name="PAEA01_RoofDecor_Pipe_03a_PRE2 (2)" parent="__EA_ART__/PAEA01_RoofDecor_Pipe_03a_PRE2" instance=ExtResource("14")]
+transform = Transform3D(0.009421, 0.000004, 0.999955, 0, 1, -0.000004, -0.999955, 0, 0.009421, 7.809583, 17.97, 156.48882)
+
+[node name="PAEA01_RoofDecor_Pipe_03a_PRE2" parent="__EA_ART__/PAEA01_RoofDecor_Pipe_03a_PRE2" instance=ExtResource("14")]
+transform = Transform3D(0.009421, 0.000004, 0.999955, 0, 1, -0.000004, -0.999955, 0, 0.009421, 7.809583, 17.97, 186.49382)
+
+[node name="PAEA01_RoofDecor_Pipe_03a_PRE2 (1)" parent="__EA_ART__/PAEA01_RoofDecor_Pipe_03a_PRE2" instance=ExtResource("14")]
+transform = Transform3D(0.009421, 0.000004, 0.999955, 0, 1, -0.000004, -0.999955, 0, 0.009421, 7.9038, 17.97, 176.495)
+
+[node name="PAEA01_WallDecor_Pipe_Main_02c_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Pipe_Main_02c_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Pipe_Main_02c_PRE2" instance=ExtResource("15")]
+transform = Transform3D(0, -0, 1.000001, 0, 1.5759, 0, -1.000001, 0, 0, 18.13, 9.2, 124.895)
+
+[node name="PAEA01_WallDecor_Light_neon_01d_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Light_neon_01d_PRE2 (2)" parent="__EA_ART__/PAEA01_WallDecor_Light_neon_01d_PRE2" instance=ExtResource("16")]
+transform = Transform3D(-0.99991, -0.009425, 0.009517, 0.009513, -0.99991, 0.009338, 0.009428, 0.009428, 0.999911, 6.626721, 10.58, 181.77582)
+
+[node name="PAEA01_WallDecor_Light_neon_01d_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Light_neon_01d_PRE2" instance=ExtResource("16")]
+transform = Transform3D(-0.018851, -0.009516, -0.999778, 0.009513, -0.999912, 0.009338, -0.999777, -0.009335, 0.01894, 11.924581, 10.553, 186.18982)
+
+[node name="PAEA01_WallDecor_Light_neon_01d_PRE2 (1)" parent="__EA_ART__/PAEA01_WallDecor_Light_neon_01d_PRE2" instance=ExtResource("16")]
+transform = Transform3D(0.999555, 0.009245, -0.028362, 0.009513, -0.999912, 0.009338, -0.028273, -0.009604, -0.999556, 6.629582, 10.56, 191.35382)
+
+[node name="PAEA01_WallDecor_Light_neon_01d_PRE2 (3)" parent="__EA_ART__/PAEA01_WallDecor_Light_neon_01d_PRE2" instance=ExtResource("16")]
+transform = Transform3D(0.037691, 0.00969, 0.999243, 0.009513, -0.999912, 0.009338, 0.999244, 0.009154, -0.03778, 1.963582, 10.55, 186.19409)
+
+[node name="PAEA01_GroundDecor_Rubbish_Package_01b_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Rubbish_Package_01b_PRE2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Package_01b_PRE2" instance=ExtResource("17")]
+transform = Transform3D(-1.156739, 0, -0.223905, 0, 1.17821, 0, 0.223905, -0, -1.156739, 10.495588, 9.906763, 157.80539)
+
+[node name="PAEA01_GroundDecor_Props_Box_T2_01b" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Props_Box_T2_01b_PRE" parent="__EA_ART__/PAEA01_GroundDecor_Props_Box_T2_01b" instance=ExtResource("18")]
+transform = Transform3D(-0.512123, 0.000001, -0.004828, -0.000001, 1, 0.000112, 0.004828, 0.000218, -0.512123, 11.073415, 10.264801, 189.1327)
+
+[node name="PAEA01_GroundDecor_Props_Box_T2_01b_PRE (1)" parent="__EA_ART__/PAEA01_GroundDecor_Props_Box_T2_01b" instance=ExtResource("18")]
+transform = Transform3D(-0.512123, 0.000001, -0.004828, 0.00307, 0.7719, -0.325579, 0.003727, -0.635744, -0.395308, 11.157582, 11.285801, 189.47983)
+
+[node name="PAEA01_GroundDecor_Props_Box_T2_01a" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Props_Box_T2_01a_PRE" parent="__EA_ART__/PAEA01_GroundDecor_Props_Box_T2_01a" instance=ExtResource("19")]
+transform = Transform3D(0.000088, -0.999955, 0.009427, 0.999955, -0.000001, -0.009428, 0.009427, 0.009428, 0.999911, 11.500585, 11.551802, 190.11282)
+
+[node name="PAEA01_WallDecor_Cock_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Cock_01a_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Cock_01a_PRE2" instance=ExtResource("20")]
+transform = Transform3D(0, 0, -1.000001, 0, 1, 0, 1.000001, -0, 0, 18.028, 3.103, 126.52)
+
+[node name="PAEA01_GroundDecor_Rubbish_Package_01d_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Rubbish_Package_01d_PRE2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Package_01d_PRE2" instance=ExtResource("21")]
+transform = Transform3D(-0.856761, 0, -0.221166, 0, 0.884846, 0, 0.221166, -0, -0.856761, 23.094744, 0.138898, 126.114555)
+
+[node name="PAEA01_WallDecor_Pipe_RoundSide_02b_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Pipe_RoundSide_02b_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Pipe_RoundSide_02b_PRE2" instance=ExtResource("22")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, -0, -1, 0, 20.46, 3.5, 133.67)
+
+[node name="PAEA01_WallDecor_Electric_Box_01c_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Electric_Box_01c_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Electric_Box_01c_PRE2" instance=ExtResource("23")]
+transform = Transform3D(0.018844, 0, 0.999822, -0.000001, 1, 0, -0.999822, -0.000001, 0.018844, 1.524587, 11.688, 190.70383)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01c_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01c_PRE2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Cygaro_01c_PRE2" instance=ExtResource("24")]
+transform = Transform3D(0, -1, 0, 0.912814, 0, 0.408375, -0.408375, 0, 0.912814, 8.622579, 10.0723, 188.86826)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01c_PRE2_2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Cygaro_01c_PRE2" instance=ExtResource("24")]
+transform = Transform3D(0.302554, -1.114399, 0, -0.000001, -0, 1.15474, -1.114399, -0.302554, -0.000001, 25.790741, 0.110001, 131.24425)
+
+[node name="PAEA01_TechRoom_Props_Cable_01b" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_TechRoom_Props_Cable_01b_PRE (1)" parent="__EA_ART__/PAEA01_TechRoom_Props_Cable_01b" instance=ExtResource("25")]
+transform = Transform3D(0, -1.000001, 0, -0.551355, 0, -0.834271, 0.834271, 0, -0.551355, 11.43, 14.689, 160.077)
+
+[node name="PAEA01_TechRoom_Props_Cable_01b_PRE" parent="__EA_ART__/PAEA01_TechRoom_Props_Cable_01b" instance=ExtResource("25")]
+transform = Transform3D(-0.955944, -0, 0.293553, 0, 1, 0, -0.293553, 0, -0.955944, 3.624, 9.906772, 160.92798)
+
+[node name="PAEA01_GroundDecor_Rubbish_hatch_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Rubbish_hatch_01a_PRE2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_hatch_01a_PRE2" instance=ExtResource("26")]
+transform = Transform3D(-0.558869, 0, 0.672164, 0, 0.874151, -0, -0.672164, 0, -0.558869, 6.129698, 9.89583, 154.81992)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01b_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01b_PRE2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Cygaro_01b_PRE2" instance=ExtResource("27")]
+transform = Transform3D(-0.156832, 0, -0.912831, 0, 0.926204, 0, 0.912831, -0, -0.156832, 3.674879, 9.895833, 157.8839)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01b_PRE2 (1)" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Cygaro_01b_PRE2" instance=ExtResource("27")]
+transform = Transform3D(0.152465, -0.928202, 0, -0.000001, -0, 0.94064, -0.928202, -0.152465, -0.000001, 27.200014, 0.109998, 127.7196)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01b_PRE2_2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Cygaro_01b_PRE2" instance=ExtResource("27")]
+transform = Transform3D(-0.718055, 0.248399, -0, 0, 0.000001, 0.759805, 0.248399, 0.718054, -0.000001, 25.330177, 0.109999, 127.919495)
+
+[node name="PAEA01_GroundDecor_Rubbish_Cygaro_01b_PRE2_3" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_Cygaro_01b_PRE2" instance=ExtResource("27")]
+transform = Transform3D(-1, 0, -0, 0, 1, 0, 0, -0, -1, 6.156583, 10.044, 190.22882)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01a_PRE2 (1)" parent="__EA_ART__/PAEA01_GroundDecor_Wall_broken_01a_PRE2" instance=ExtResource("28")]
+transform = Transform3D(-0.043202, 0.999064, -0.002601, -0.060113, -0.000001, 0.998193, 0.997257, 0.043281, 0.060057, 1.503514, 11.073298, 174.68)
+
+[node name="PAEA01_WallDecor_Pipe_Main_03a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Pipe_Main_03a_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Pipe_Main_03a_PRE2" instance=ExtResource("29")]
+transform = Transform3D(1, 0, 0, 0, 0.996592, -0.082493, 0, 0.082493, 0.996592, 10.2691, 15.011898, 172.7727)
+
+[node name="PAEA01_WallDecor_Pipe_Main_03a_PRE2 (1)" parent="__EA_ART__/PAEA01_WallDecor_Pipe_Main_03a_PRE2" instance=ExtResource("29")]
+transform = Transform3D(-1.000001, 0, -0.000001, -0.000001, -0, 1, 0, 1, 0, 5.39, 10.081898, 169.94998)
+
+[node name="PAEA01_WallDecor_Pipe_Main_03a_PRE2 (2)" parent="__EA_ART__/PAEA01_WallDecor_Pipe_Main_03a_PRE2" instance=ExtResource("29")]
+transform = Transform3D(-0, 1, 0, 1, 0, -0.000001, -0.000001, 0, -1.000001, 9.5141, 15.937634, 159.9)
+
+[node name="PAEA01_GroundDecor_Rubbish_cap_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Rubbish_cap_01a_PRE2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_cap_01a_PRE2" instance=ExtResource("30")]
+transform = Transform3D(0.999956, 0, -0.00942, -0, 1, 0, 0.00942, 0, 0.999956, 1.943585, 12.3022, 190.50282)
+
+[node name="PAEA01_GroundDecor_Rubbish_cap_01a_PRE2_2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_cap_01a_PRE2" instance=ExtResource("30")]
+transform = Transform3D(0.722926, 0, -0.390306, 0, 0.82156, 0, 0.390306, -0, 0.722926, 25.15081, 0.138902, 132.00635)
+
+[node name="PAEA01_GroundDecor_Rubbish_cap_01a_PRE2_3" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_cap_01a_PRE2" instance=ExtResource("30")]
+transform = Transform3D(-0.399726, 0, 0.766928, 0, 0.864847, -0, -0.766928, 0, -0.399726, 10.019776, 9.895825, 155.87839)
+
+[node name="PAEA01_GroundDecor_Rubbish_cap_01a_PRE2_4" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_cap_01a_PRE2" instance=ExtResource("30")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 3.93958, 9.874, 184.28783)
+
+[node name="PAEA01_TechRoom_euroPalet_01b" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_TechRoom_euroPalet_01b_PRE" parent="__EA_ART__/PAEA01_TechRoom_euroPalet_01b" instance=ExtResource("31")]
+transform = Transform3D(0.226967, -0.973903, -0, 0.973903, 0.226967, -0, 0, -0, 1, 11.191, 11.27372, 152.49399)
+
+[node name="PAEA01_TechRoom_euroPalet_01b_PRE_2" parent="__EA_ART__/PAEA01_TechRoom_euroPalet_01b" instance=ExtResource("31")]
+transform = Transform3D(0.337292, 0.941401, 0, -0.941401, 0.337292, 0, 0, -0, 1, 20.963001, 1.420639, 133.41199)
+
+[node name="PAEA01_WallDecor_Electric_Box_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Electric_Box_01a_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Electric_Box_01a_PRE2" instance=ExtResource("32")]
+transform = Transform3D(0, -0, 1.000001, 0, 1, 0, -1.000001, 0, 0, 16.889, 9.37, 124.95)
+
+[node name="PAEA01_WallDecor_Electric_Box_01a_PRE2_2" parent="__EA_ART__/PAEA01_WallDecor_Electric_Box_01a_PRE2" instance=ExtResource("32")]
+transform = Transform3D(0.000089, -0.999955, 0.009428, 0.999955, -0, -0.009428, 0.009428, 0.009428, 0.999911, 10.207, 16.371, 172.21999)
+
+[node name="PAEA01_WallDecor_Electric_Box_01a_PRE2 (1)" parent="__EA_ART__/PAEA01_WallDecor_Electric_Box_01a_PRE2" instance=ExtResource("32")]
+transform = Transform3D(-0.000089, 0.999956, -0.009427, 0.999956, -0, -0.009428, -0.009428, -0.009428, -0.999912, 11.397, 16.188318, 160.57599)
+
+[node name="PAEA01_WallDecor_Pipe_Main_03b_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Pipe_Main_03b_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Pipe_Main_03b_PRE2" instance=ExtResource("33")]
+transform = Transform3D(1.297998, -0, 0, 0, 1.297998, 0, -0, 0, 1.297998, 2.655583, 9.82, 182.05978)
+
+[node name="PAEA01_Ground_WorksPlace_Ladder_02a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_Ground_WorksPlace_Ladder_02a_PRE2" parent="__EA_ART__/PAEA01_Ground_WorksPlace_Ladder_02a_PRE2" instance=ExtResource("34")]
+transform = Transform3D(0.074769, 0, -0.997201, 0, 1, 0, 0.997201, -0, 0.074769, 23.83727, 0, 126.15764)
+
+[node name="PAEA01_WallDecor_Pipe_Corner_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Pipe_Corner_01a_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Pipe_Corner_01a_PRE2" instance=ExtResource("35")]
+transform = Transform3D(0.478259, -0, 0.878219, 0, 1, 0, -0.878219, 0, 0.478259, 18.48898, 0.408, 126.4701)
+
+[node name="PAEA01_WallDecor_Pipe_Corner_01a_PRE2_2" parent="__EA_ART__/PAEA01_WallDecor_Pipe_Corner_01a_PRE2" instance=ExtResource("35")]
+transform = Transform3D(-1.234581, 0.006381, -0.677532, 0.000005, -1.408228, -0.013272, -0.677562, -0.011637, 1.234525, 4.149587, 10.29, 190.06383)
+
+[node name="PAEA01_TechRoom_Props_plank_01a" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_TechRoom_Props_plank_01a_PRE (1)" parent="__EA_ART__/PAEA01_TechRoom_Props_plank_01a" instance=ExtResource("36")]
+transform = Transform3D(-0.940296, -0.254931, 0.051499, -0.259235, 0.903109, -0.262655, 0.020962, -0.266833, -0.938168, 8.773, 10.268, 159.23398)
+
+[node name="PAEA01_TechRoom_Props_plank_01a_PRE" parent="__EA_ART__/PAEA01_TechRoom_Props_plank_01a" instance=ExtResource("36")]
+transform = Transform3D(0.680846, 0, -0.732427, 0, 1, 0.000001, 0.732427, -0.000001, 0.680846, 4.077762, 9.906772, 159.73459)
+
+[node name="PAEA01_FPS_Wall_Tunnel_01a" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_FPS_Wall_Tunnel_01a_PRE" parent="__EA_ART__/PAEA01_FPS_Wall_Tunnel_01a" instance=ExtResource("37")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 6.6557, 9.9069, 171.45999)
+
+[node name="PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a (2)" parent="__EA_ART__/PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a" instance=ExtResource("38")]
+transform = Transform3D(-0.000001, -0, -1, -0.000004, 1, 0, 1, 0.000004, -0.000001, 47.531918, -4.879103, 139.502)
+
+[node name="PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a (1)" parent="__EA_ART__/PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a" instance=ExtResource("38")]
+transform = Transform3D(-0.000001, -0, -1, -0.000004, 1, 0, 1, 0.000004, -0.000001, 47.531914, -4.879103, 99.612)
+
+[node name="PAEA01_WallDecor_Destruction_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Destruction_01a_PRE2 (2)" parent="__EA_ART__/PAEA01_WallDecor_Destruction_01a_PRE2" instance=ExtResource("39")]
+transform = Transform3D(-0.000001, 0, -1, -0, 1, 0, 1, 0, -0.000001, 4.338, 6.477, 129.386)
+
+[node name="PAEA01_WallDecor_Destruction_01a_PRE2 (3)" parent="__EA_ART__/PAEA01_WallDecor_Destruction_01a_PRE2" instance=ExtResource("39")]
+transform = Transform3D(1, 0, -0.000001, -0, 1, 0, 0.000001, 0, 1, 6.582, 6.477, 127.026)
+
+[node name="PAEA01_WallDecor_Destruction_01a_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Destruction_01a_PRE2" instance=ExtResource("39")]
+transform = Transform3D(0, -0, 1.000001, 0, 1, 0, -1.000001, 0, 0, 17.476, 1.337, 124.99)
+
+[node name="PAEA01_WallDecor_Destruction_01a_PRE2 (1)" parent="__EA_ART__/PAEA01_WallDecor_Destruction_01a_PRE2" instance=ExtResource("39")]
+transform = Transform3D(-1, -0, 0.000001, 0, 1, 0, -0.000001, 0, -1, 18.141, 1.228, 131.456)
+
+[node name="PAEA01_WallDecor_Destruction_01a_PRE2 (4)" parent="__EA_ART__/PAEA01_WallDecor_Destruction_01a_PRE2" instance=ExtResource("39")]
+transform = Transform3D(1, 0, -0.000001, -0, 1, 0, 0.000001, 0, 1, 5.389, 13.331, 161.59)
+
+[node name="PAEA01_WallDecor_Electric_CabbleBox_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Electric_CabbleBox_01a_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Electric_CabbleBox_01a_PRE2" instance=ExtResource("40")]
+transform = Transform3D(1.288284, -0, 0, 0, 1.288284, 0, -0, 0, 1.288284, 18.758625, 0, 124.99239)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2 (21)" parent="__EA_ART__/PAEA01_Arch_Wall_Column_01a_PRE2" instance=ExtResource("41")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 1.76, 9.999976, 191.68999)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2 (20)" parent="__EA_ART__/PAEA01_Arch_Wall_Column_01a_PRE2" instance=ExtResource("41")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 11.88, 9.999976, 161.73999)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2 (27)" parent="__EA_ART__/PAEA01_Arch_Wall_Column_01a_PRE2" instance=ExtResource("41")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 27.66, 7.232998, 125.649994)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2 (23)" parent="__EA_ART__/PAEA01_Arch_Wall_Column_01a_PRE2" instance=ExtResource("41")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 1.88, 9.999976, 161.73999)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2 (24)" parent="__EA_ART__/PAEA01_Arch_Wall_Column_01a_PRE2" instance=ExtResource("41")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 27.66, -0.766703, 133.44)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2 (22)" parent="__EA_ART__/PAEA01_Arch_Wall_Column_01a_PRE2" instance=ExtResource("41")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 11.88, 9.999976, 191.92)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2 (25)" parent="__EA_ART__/PAEA01_Arch_Wall_Column_01a_PRE2" instance=ExtResource("41")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 27.66, -0.766703, 125.649994)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2 (16)" parent="__EA_ART__/PAEA01_Arch_Wall_Column_01a_PRE2" instance=ExtResource("41")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 11.88, 9.999976, 171.92)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2 (26)" parent="__EA_ART__/PAEA01_Arch_Wall_Column_01a_PRE2" instance=ExtResource("41")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 27.66, 7.232998, 133.44)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2 (17)" parent="__EA_ART__/PAEA01_Arch_Wall_Column_01a_PRE2" instance=ExtResource("41")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 1.76, 9.999976, 140.69583)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2 (18)" parent="__EA_ART__/PAEA01_Arch_Wall_Column_01a_PRE2" instance=ExtResource("41")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 11.88, 9.999976, 140.92584)
+
+[node name="PAEA01_Arch_Wall_Column_01a_PRE2 (15)" parent="__EA_ART__/PAEA01_Arch_Wall_Column_01a_PRE2" instance=ExtResource("41")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 1.76, 9.999976, 171.69)
+
+[node name="PAEA01_WallDecor_Props_mill_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Props_mill_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Props_mill_PRE2" instance=ExtResource("42")]
+transform = Transform3D(-0.000001, 0, 1, 0, 1, -0, -1, 0, -0.000001, 17.719, 4.352, 126.101)
+
+[node name="PAEA01_WallDecor_Props_mill_PRE2_2" parent="__EA_ART__/PAEA01_WallDecor_Props_mill_PRE2" instance=ExtResource("42")]
+transform = Transform3D(-0, -0, 1.000001, 0, 1, 0, -1.000001, 0, -0, 1.699582, 16.15, 186.68382)
+
+[node name="PAEA01_WallDecor_Props_mill_PRE2 (1)" parent="__EA_ART__/PAEA01_WallDecor_Props_mill_PRE2" instance=ExtResource("42")]
+transform = Transform3D(-0.000001, 0, 1, 0, 1, -0, -1, 0, -0.000001, 20.463, 5.796, 132.911)
+
+[node name="PAEA01_FPS_Wall_Main_01b_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_FPS_Wall_Main_01b_PRE2 (12)" parent="__EA_ART__/PAEA01_FPS_Wall_Main_01b_PRE2" instance=ExtResource("43")]
+transform = Transform3D(-0.009429, -0, 0.999957, 0, 1, 0, -0.999957, 0, -0.009429, 1.934231, 9.906768, 151.40227)
+
+[node name="PAEA01_FPS_Wall_Main_01b_PRE2 (10)" parent="__EA_ART__/PAEA01_FPS_Wall_Main_01b_PRE2" instance=ExtResource("43")]
+transform = Transform3D(0.009428, 0, -0.999956, -0, 1, 0, 0.999956, 0, 0.009428, 12.0284, 9.906797, 181.4037)
+
+[node name="PAEA01_FPS_Wall_Main_01b_PRE2 (11)" parent="__EA_ART__/PAEA01_FPS_Wall_Main_01b_PRE2" instance=ExtResource("43")]
+transform = Transform3D(0.009428, 0, -0.999956, -0, 1, 0, 0.999956, 0, 0.009428, 11.9341, 9.906797, 171.40399)
+
+[node name="PAEA01_FPS_Wall_Main_01b_PRE2 (13)" parent="__EA_ART__/PAEA01_FPS_Wall_Main_01b_PRE2" instance=ExtResource("43")]
+transform = Transform3D(-1.180791, 0, -0.018852, -0, 1, 0, 0.022264, 0, -0.999823, 12.8373, 9.957298, 191.1975)
+
+[node name="PAEA01_FPS_Wall_Main_01b_PRE2 (15)" parent="__EA_ART__/PAEA01_FPS_Wall_Main_01b_PRE2" instance=ExtResource("43")]
+transform = Transform3D(0.009421, 0, 0.999956, 0, 1, -0, -0.999956, 0, 0.009421, 1.9343, 9.957298, 191.4032)
+
+[node name="PAEA01_FPS_Wall_Main_01b_PRE2 (18)" parent="__EA_ART__/PAEA01_FPS_Wall_Main_01b_PRE2" instance=ExtResource("43")]
+transform = Transform3D(-0.009429, -0, 0.999957, 0, 1, 0, -0.999957, 0, -0.009429, 2.028532, 9.906768, 161.402)
+
+[node name="PAEA01_FPS_Wall_Main_01b_PRE2 (17)" parent="__EA_ART__/PAEA01_FPS_Wall_Main_01b_PRE2" instance=ExtResource("43")]
+transform = Transform3D(-0.00942, 0, -0.999956, -0, 1, 0, 0.999956, 0, -0.00942, 12.028326, 9.957269, 141.40277)
+
+[node name="PAEA01_FPS_Wall_Main_01b_PRE2 (16)" parent="__EA_ART__/PAEA01_FPS_Wall_Main_01b_PRE2" instance=ExtResource("43")]
+transform = Transform3D(0.009421, 0, 0.999955, 0, 1, -0, -0.999956, 0, 0.009421, 2.0285, 9.957298, 181.4037)
+
+[node name="PAEA01_WallDecor_Pipe_Front_02a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Pipe_Front_02a_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Pipe_Front_02a_PRE2" instance=ExtResource("44")]
+transform = Transform3D(0, 1, -0.000001, -0, 0.000001, 1, 1, -0, 0, -0.43, 9.91, 179.79)
+
+[node name="PAEA01_WallDecor_Electric_Box_01b_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Electric_Box_01b_PRE2 (1)" parent="__EA_ART__/PAEA01_WallDecor_Electric_Box_01b_PRE2" instance=ExtResource("45")]
+transform = Transform3D(-1, 0, -0.000001, 0, 1, 0, 0.000001, -0, -1, 4.39, 10.766, 161.65799)
+
+[node name="PAEA01_WallDecor_Electric_Box_01b_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Electric_Box_01b_PRE2" instance=ExtResource("45")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, -0, 0, 8.244, 10.766, 164.74399)
+
+[node name="PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a_PRE2 (5)" parent="__EA_ART__/PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a_PRE2" instance=ExtResource("38")]
+transform = Transform3D(-0.000001, -0, -1, -0.000004, 1, 0, 1, 0.000004, -0.000001, 47.531914, -4.879103, 109.58199)
+
+[node name="PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a_PRE2 (7)" parent="__EA_ART__/PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a_PRE2" instance=ExtResource("38")]
+transform = Transform3D(-0.000001, -0, -1, -0.000004, 1, 0, 1, 0.000004, -0.000001, 47.531918, -4.879103, 159.422)
+
+[node name="PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a_PRE2 (6)" parent="__EA_ART__/PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a_PRE2" instance=ExtResource("38")]
+transform = Transform3D(-0.000001, -0, -1, -0.000004, 1, 0, 1, 0.000004, -0.000001, 47.531918, -4.879103, 119.542)
+
+[node name="PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a_PRE2 (8)" parent="__EA_ART__/PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a_PRE2" instance=ExtResource("38")]
+transform = Transform3D(-0.000001, -0, -1, -0.000004, 1, 0, 1, 0.000004, -0.000001, 47.531918, -4.879103, 149.46199)
+
+[node name="PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a_PRE2 (1)" parent="__EA_ART__/PAEA01_Arch_Tunel_Roof_Seam_Exodus_01a_PRE2" instance=ExtResource("38")]
+transform = Transform3D(-0.000001, -0, -1, -0.000004, 1, 0, 1, 0.000004, -0.000001, 47.530914, -4.879103, 90.01299)
+
+[node name="PAEA01_WallDecor_Entry_Door_01c" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Entry_Door_01c_PRE" parent="__EA_ART__/PAEA01_WallDecor_Entry_Door_01c" instance=ExtResource("46")]
+transform = Transform3D(0.121724, 0.992565, 0.000003, 0, 0.000003, -1.000001, -0.992564, 0.121724, 0, 8.578907, 9.991898, 152.108)
+
+[node name="PAEA01_WallDecor_Pipe_Seam_01d" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Pipe_Seam_01d_PRE" parent="__EA_ART__/PAEA01_WallDecor_Pipe_Seam_01d" instance=ExtResource("47")]
+transform = Transform3D(0, -0.000004, -1.000001, 0, 1, -0.000004, 1.000001, 0, 0, 17.917, 3.1306, 123.96)
+
+[node name="PAEA01_FPS_Wall_Main_Door_01a" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_FPS_Wall_Main_Door_01a_PRE" parent="__EA_ART__/PAEA01_FPS_Wall_Main_Door_01a" instance=ExtResource("48")]
+transform = Transform3D(0, -0, 1, 0, 1, 0, -1, 0, 0, 15.027902, 9.906798, 161.40201)
+
+[node name="PAEA01_WallDecor_Cock_01b_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_WallDecor_Cock_01b_PRE2" parent="__EA_ART__/PAEA01_WallDecor_Cock_01b_PRE2" instance=ExtResource("49")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 20.483, 3.615, 131.227)
+
+[node name="PAEA01_GroundDecor_Props_Box_01a_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Props_Box_01a_PRE2" parent="__EA_ART__/PAEA01_GroundDecor_Props_Box_01a_PRE2" instance=ExtResource("50")]
+transform = Transform3D(1.155443, -0, 0, 0, 1.155443, 0, -0, 0, 1.155443, 22.58, 0.64, 134.276)
+
+[node name="PAEA01_GroundDecor_Props_Box_01a_PRE2_2" parent="__EA_ART__/PAEA01_GroundDecor_Props_Box_01a_PRE2" instance=ExtResource("50")]
+transform = Transform3D(0.000088, -0.999955, 0.009427, 0.999955, -0.000001, -0.009428, 0.009427, 0.009428, 0.999911, 11.157979, 10.721801, 190.60413)
+
+[node name="PAEA01_GroundDecor_Rubbish_cap_01b_001_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Rubbish_cap_01b_001_PRE2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_cap_01b_001_PRE2" instance=ExtResource("51")]
+transform = Transform3D(1, -0, 0, 0, 0, 1, -0, -1, 0, 10.360186, 10.54, 158.22098)
+
+[node name="PAEA01_GroundDecor_Rubbish_cap_01b_001_PRE2_2" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_cap_01b_001_PRE2" instance=ExtResource("51")]
+transform = Transform3D(0.773931, 0, 0.535841, -0, 0.941326, -0, -0.535841, -0, 0.773931, 23.637573, 0.138898, 127.07179)
+
+[node name="PAEA01_GroundDecor_Rubbish_cap_01b_001_PRE2_3" parent="__EA_ART__/PAEA01_GroundDecor_Rubbish_cap_01b_001_PRE2" instance=ExtResource("51")]
+transform = Transform3D(0.967941, -0, 0, 0, 0.009123, 0.9679, -0, -0.9679, 0.009123, 1.851582, 12.468, 191.00082)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01b_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01b_PRE2 (1)" parent="__EA_ART__/PAEA01_GroundDecor_Wall_broken_01b_PRE2" instance=ExtResource("52")]
+transform = Transform3D(-0.999823, 0, -0.023356, 0, 1, 0, 0.018848, -0, -1.238937, 10.248586, 9.91, 190.71982)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01c_PRE2" type="Node3D" parent="__EA_ART__"]
+transform = Transform3D(1, 0, -0, -0, 1, 0, 0, 0, 1, -0, 0, 0)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01c_PRE2 (2)" parent="__EA_ART__/PAEA01_GroundDecor_Wall_broken_01c_PRE2" instance=ExtResource("53")]
+transform = Transform3D(0.000001, -1, 0, 0, -0, -1, 1, 0.000001, 0, 12.24, 11.42, 150.66447)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01c_PRE2 (5)" parent="__EA_ART__/PAEA01_GroundDecor_Wall_broken_01c_PRE2" instance=ExtResource("53")]
+transform = Transform3D(0.000001, -1, -0, 1, 0.000001, -0, 0, -0, 1, 12.24, 11.038, 147.7745)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01c_PRE2 (8)" parent="__EA_ART__/PAEA01_GroundDecor_Wall_broken_01c_PRE2" instance=ExtResource("53")]
+transform = Transform3D(0, -0, -1, -0.000001, 1, -0, 1, 0.000001, 0, 11.361508, 9.73, 144.47998)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01c_PRE2 (6)" parent="__EA_ART__/PAEA01_GroundDecor_Wall_broken_01c_PRE2" instance=ExtResource("53")]
+transform = Transform3D(0.000001, -1, 0, 0, -0, -1, 1, 0.000001, 0, 12.24, 11.42, 144.47998)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01c_PRE2" parent="__EA_ART__/PAEA01_GroundDecor_Wall_broken_01c_PRE2" instance=ExtResource("53")]
+transform = Transform3D(0.000001, -1, -0, 1, 0.000001, -0, 0, -0, 1, 12.421906, 11.038, 152.902)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01c_PRE2 (4)" parent="__EA_ART__/PAEA01_GroundDecor_Wall_broken_01c_PRE2" instance=ExtResource("53")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 10.697416, 9.906763, 158.97058)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01c_PRE2 (7)" parent="__EA_ART__/PAEA01_GroundDecor_Wall_broken_01c_PRE2" instance=ExtResource("53")]
+transform = Transform3D(1, 0.000001, -0, -0.000001, 1, 0, 0, -0, 1, 10.979508, 9.73, 147.7745)

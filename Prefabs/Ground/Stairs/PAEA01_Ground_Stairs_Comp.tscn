@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Prefabs/Arch/Wall/FPS/Wall/PAEA01_FPS_Wall_CornerOutside_04a.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Prefabs/Ground/Stairs/PAEA01_Ground_Stairs_BackUp_02a_PRE2.tscn" id="2"]
+
+[node name="PAEA01_Ground_Stairs_Comp" type="Node3D"]
+
+[node name="PAEA01_FPS_Wall_CornerOutside_04a_PRE2" parent="." instance=ExtResource("1")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 10.001, 0.000006, -1.6666)
+
+[node name="PAEA01_FPS_Wall_CornerOutside_04a_PRE2 (1)" parent="." instance=ExtResource("1")]
+transform = Transform3D(-1, -0, 0, 0, 1, 0, -0, 0, -1, -9.9994, 0.000006, -1.6666)
+
+[node name="PAEA01_Ground_Stairs_BackUp_02a_PRE2" parent="." instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0.000001, 0, 1, -0, -0.000001, 0, -1, 0.001057, -0.00001, 3.3333)

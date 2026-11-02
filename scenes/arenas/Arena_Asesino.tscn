@@ -1,0 +1,392 @@
+[gd_scene load_steps=34 format=3]
+
+[ext_resource type="Material" path="res://addons/skybox_sampler/skies/12_moonlit_night.tres" id="r1"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_Ground_Platform_Seam_01a.glb" id="r2"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_Ground_Platform_Seam_01c.glb" id="r3"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_Arch_Wall_main_02b.glb" id="r4"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_Arch_Wall_DoorMain_02a.glb" id="r5"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_Arch_Column_02a.glb" id="r6"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_Arch_Column_02d.glb" id="r7"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Wall_broken_01a.glb" id="r8"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Wall_broken_01b.glb" id="r9"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Wall_broken_01c.glb" id="r10"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Props_TicketBarier_01a.glb" id="r11"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Props_TicketBarier_01b.glb" id="r12"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Props_TicketMachine_01a.glb" id="r13"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Furniture_Bench_02b.glb" id="r14"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Furniture_Bench_02c.glb" id="r15"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Props_Barrel_01a.glb" id="r16"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Props_Box_T2_01b.glb" id="r17"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Props_Box_T2_01a.glb" id="r18"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Rubbish_Trash_01c.glb" id="r19"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Rubbish_Trash_01d.glb" id="r20"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_RoofDecor_Pipe_01a.glb" id="r21"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_RoofDecor_Pipe_01b.glb" id="r22"]
+[ext_resource type="PackedScene" path="res://Meshes/EA_Characters_Statue_Hooded_Moss_1a.gltf" id="r23"]
+[ext_resource type="PackedScene" path="res://Meshes/EA_Characters_Statue_Dirt_1d.gltf" id="r24"]
+[ext_resource type="PackedScene" path="res://Meshes/EA_Characters_Statue_Hooded_Dirt_1a.gltf" id="r25"]
+[ext_resource type="PackedScene" path="res://Meshes/EA_Characters_Gargoyle_Moss_01a.gltf" id="r26"]
+[ext_resource type="PackedScene" path="res://Meshes/EA_Props_Gravestone_Crows_Dirt_01a.gltf" id="r27"]
+[ext_resource type="PackedScene" path="res://Meshes/EA_Props_Gravestone_Crows_Moss_01a.gltf" id="r28"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_WallDecor_Light_neon_01d.glb" id="r29"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_WallDecor_Light_neon_01e.glb" id="r30"]
+
+[sub_resource type="Sky" id="Sky_Arena_Asesino"]
+sky_material = ExtResource("r1")
+
+[sub_resource type="Environment" id="Env_Arena_Asesino"]
+background_mode = 2
+sky = SubResource("Sky_Arena_Asesino")
+ambient_light_source = 3
+ambient_light_sky_contribution = 0.62
+ambient_light_energy = 0.72
+adjustment_saturation = 0.9
+adjustment_contrast = 1.1
+fog_enabled = true
+fog_light_color = Color(0.32, 0.46, 0.82, 1)
+fog_light_energy = 0.85
+fog_density = 0.013
+fog_sky_affect = 0.55
+fog_aerial_perspective = 0.35
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.016
+volumetric_fog_albedo = Color(0.42, 0.58, 1.0, 1)
+volumetric_fog_emission = Color(0.05, 0.12, 0.35, 1)
+volumetric_fog_emission_energy = 0.3
+volumetric_fog_length = 64.0
+reflected_light_source = 2
+tonemap_mode = 3
+glow_enabled = true
+glow_intensity = 0.65
+glow_bloom = 0.08
+adjustment_enabled = true
+
+[sub_resource type="BoxShape3D" id="Caja_Arena_Asesino"]
+size = Vector3(180, 2, 180)
+
+[node name="Arena_Asesino" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Env_Arena_Asesino")
+
+[node name="LuzDireccional" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.743145, -0.567455, 0.354585, 0.000000, 0.529919, 0.848048, -0.669131, -0.630223, 0.393807, 0.000000, 0.000000, 0.000000)
+light_color = Color(0.6200, 0.7600, 1.0000, 1.0000)
+light_energy = 0.7
+shadow_enabled = true
+directional_shadow_max_distance = 90.0
+
+[node name="CamaraVista" type="Camera3D" parent="."]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 0.707107, 0.707107, 0.000000, -0.707107, 0.707107, 0.000000, 7.000000, 10.000000)
+current = true
+fov = 68.0
+
+[node name="Titulo" type="Label3D" parent="."]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 9.200000, -20.300000)
+text = "ARENA DEL ASESINO"
+font_size = 96
+pixel_size = 0.02
+outline_size = 18
+modulate = Color(0.6200, 0.7800, 1.0000, 1.0000)
+outline_modulate = Color(0.0200, 0.0200, 0.0200, 0.9500)
+
+[node name="Suelo" type="Node3D" parent="."]
+
+[node name="Baldosa_0_0" parent="Suelo" instance=ExtResource("r2")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -15.000000, -2.000000, -15.000000)
+
+[node name="Baldosa_0_1" parent="Suelo" instance=ExtResource("r2")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -15.000000, -2.000000, -5.000000)
+
+[node name="Baldosa_0_2" parent="Suelo" instance=ExtResource("r2")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -15.000000, -2.000000, 5.000000)
+
+[node name="Baldosa_0_3" parent="Suelo" instance=ExtResource("r2")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -15.000000, -2.000000, 15.000000)
+
+[node name="Baldosa_1_0" parent="Suelo" instance=ExtResource("r2")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -5.000000, -2.000000, -15.000000)
+
+[node name="Baldosa_1_1" parent="Suelo" instance=ExtResource("r3")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -5.000000, -2.000000, -5.000000)
+
+[node name="Baldosa_1_2" parent="Suelo" instance=ExtResource("r3")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -5.000000, -2.000000, 5.000000)
+
+[node name="Baldosa_1_3" parent="Suelo" instance=ExtResource("r2")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -5.000000, -2.000000, 15.000000)
+
+[node name="Baldosa_2_0" parent="Suelo" instance=ExtResource("r2")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 5.000000, -2.000000, -15.000000)
+
+[node name="Baldosa_2_1" parent="Suelo" instance=ExtResource("r3")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 5.000000, -2.000000, -5.000000)
+
+[node name="Baldosa_2_2" parent="Suelo" instance=ExtResource("r3")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 5.000000, -2.000000, 5.000000)
+
+[node name="Baldosa_2_3" parent="Suelo" instance=ExtResource("r2")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 5.000000, -2.000000, 15.000000)
+
+[node name="Baldosa_3_0" parent="Suelo" instance=ExtResource("r2")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 15.000000, -2.000000, -15.000000)
+
+[node name="Baldosa_3_1" parent="Suelo" instance=ExtResource("r2")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 15.000000, -2.000000, -5.000000)
+
+[node name="Baldosa_3_2" parent="Suelo" instance=ExtResource("r2")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 15.000000, -2.000000, 5.000000)
+
+[node name="Baldosa_3_3" parent="Suelo" instance=ExtResource("r2")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 15.000000, -2.000000, 15.000000)
+
+[node name="Muros" type="Node3D" parent="."]
+
+[node name="Muro_Norte_0" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -15.000000, 0.000000, -21.500000)
+
+[node name="Muro_Norte_1" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -5.000000, 0.000000, -21.500000)
+
+[node name="Muro_Norte_2" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 5.000000, 0.000000, -21.500000)
+
+[node name="Muro_Norte_3" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 15.000000, 0.000000, -21.500000)
+
+[node name="Muro_Sur_0" parent="Muros" instance=ExtResource("r5")]
+transform = Transform3D(-1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, -0.000000, 0.000000, -1.000000, -15.000000, 0.000000, 21.500000)
+
+[node name="Muro_Sur_1" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(-1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, -0.000000, 0.000000, -1.000000, -5.000000, 0.000000, 21.500000)
+
+[node name="Muro_Sur_2" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(-1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, -0.000000, 0.000000, -1.000000, 5.000000, 0.000000, 21.500000)
+
+[node name="Muro_Sur_3" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(-1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, -0.000000, 0.000000, -1.000000, 15.000000, 0.000000, 21.500000)
+
+[node name="Muro_Este_0" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(0.000000, 0.000000, -1.000000, 0.000000, 1.000000, 0.000000, 1.000000, 0.000000, 0.000000, 21.500000, 0.000000, -15.000000)
+
+[node name="Muro_Este_1" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(0.000000, 0.000000, -1.000000, 0.000000, 1.000000, 0.000000, 1.000000, 0.000000, 0.000000, 21.500000, 0.000000, -5.000000)
+
+[node name="Muro_Este_2" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(0.000000, 0.000000, -1.000000, 0.000000, 1.000000, 0.000000, 1.000000, 0.000000, 0.000000, 21.500000, 0.000000, 5.000000)
+
+[node name="Muro_Este_3" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(0.000000, 0.000000, -1.000000, 0.000000, 1.000000, 0.000000, 1.000000, 0.000000, 0.000000, 21.500000, 0.000000, 15.000000)
+
+[node name="Muro_Oeste_0" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(0.000000, 0.000000, 1.000000, 0.000000, 1.000000, 0.000000, -1.000000, 0.000000, 0.000000, -21.500000, 0.000000, -15.000000)
+
+[node name="Muro_Oeste_1" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(0.000000, 0.000000, 1.000000, 0.000000, 1.000000, 0.000000, -1.000000, 0.000000, 0.000000, -21.500000, 0.000000, -5.000000)
+
+[node name="Muro_Oeste_2" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(0.000000, 0.000000, 1.000000, 0.000000, 1.000000, 0.000000, -1.000000, 0.000000, 0.000000, -21.500000, 0.000000, 5.000000)
+
+[node name="Muro_Oeste_3" parent="Muros" instance=ExtResource("r4")]
+transform = Transform3D(0.000000, 0.000000, 1.000000, 0.000000, 1.000000, 0.000000, -1.000000, 0.000000, 0.000000, -21.500000, 0.000000, 15.000000)
+
+[node name="Columna_Esquina_0" parent="Muros" instance=ExtResource("r6")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -18.600000, 0.000000, -18.600000)
+
+[node name="Columna_Esquina_1" parent="Muros" instance=ExtResource("r6")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 18.600000, 0.000000, -18.600000)
+
+[node name="Columna_Esquina_2" parent="Muros" instance=ExtResource("r6")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -18.600000, 0.000000, 18.600000)
+
+[node name="Columna_Esquina_3" parent="Muros" instance=ExtResource("r6")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 18.600000, 0.000000, 18.600000)
+
+[node name="Columnas" type="Node3D" parent="."]
+
+[node name="Columna_0" parent="Columnas" instance=ExtResource("r7")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -16.000000, 0.000000, -12.000000)
+
+[node name="Columna_1" parent="Columnas" instance=ExtResource("r7")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -16.000000, 0.000000, 0.000000)
+
+[node name="Columna_2" parent="Columnas" instance=ExtResource("r7")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -16.000000, 0.000000, 12.000000)
+
+[node name="Columna_3" parent="Columnas" instance=ExtResource("r7")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 16.000000, 0.000000, -12.000000)
+
+[node name="Columna_4" parent="Columnas" instance=ExtResource("r7")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 16.000000, 0.000000, 0.000000)
+
+[node name="Columna_5" parent="Columnas" instance=ExtResource("r7")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 16.000000, 0.000000, 12.000000)
+
+[node name="Columna_6" parent="Columnas" instance=ExtResource("r7")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, -15.000000)
+
+[node name="Decoracion" type="Node3D" parent="."]
+
+[node name="Prop_0" parent="Decoracion" instance=ExtResource("r8")]
+transform = Transform3D(0.951057, 0.000000, 0.309017, 0.000000, 1.000000, 0.000000, -0.309017, 0.000000, 0.951057, -8.500000, 0.000000, 6.000000)
+
+[node name="Prop_1" parent="Decoracion" instance=ExtResource("r8")]
+transform = Transform3D(0.951057, 0.000000, -0.309017, 0.000000, 1.000000, 0.000000, 0.309017, 0.000000, 0.951057, 8.500000, 0.000000, 6.000000)
+
+[node name="Prop_2" parent="Decoracion" instance=ExtResource("r9")]
+transform = Transform3D(0.882948, 0.000000, -0.469472, 0.000000, 1.000000, 0.000000, 0.469472, 0.000000, 0.882948, -8.000000, 0.000000, -8.000000)
+
+[node name="Prop_3" parent="Decoracion" instance=ExtResource("r9")]
+transform = Transform3D(0.882948, 0.000000, 0.469472, 0.000000, 1.000000, 0.000000, -0.469472, 0.000000, 0.882948, 8.000000, 0.000000, -8.000000)
+
+[node name="Prop_4" parent="Decoracion" instance=ExtResource("r10")]
+transform = Transform3D(0.000000, 0.000000, 1.000000, 0.000000, 1.000000, 0.000000, -1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 14.500000)
+
+[node name="Prop_5" parent="Decoracion" instance=ExtResource("r11")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -5.000000, 0.000000, 15.000000)
+
+[node name="Prop_6" parent="Decoracion" instance=ExtResource("r12")]
+transform = Transform3D(-1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, -0.000000, 0.000000, -1.000000, 5.000000, 0.000000, 15.000000)
+
+[node name="Prop_7" parent="Decoracion" instance=ExtResource("r13")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -12.000000, 0.000000, 17.500000)
+
+[node name="Prop_8" parent="Decoracion" instance=ExtResource("r13")]
+transform = Transform3D(-1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, -0.000000, 0.000000, -1.000000, 12.000000, 0.000000, 17.500000)
+
+[node name="Prop_9" parent="Decoracion" instance=ExtResource("r14")]
+transform = Transform3D(0.000000, 0.000000, 1.000000, 0.000000, 1.000000, 0.000000, -1.000000, 0.000000, 0.000000, -18.000000, 0.000000, 7.000000)
+
+[node name="Prop_10" parent="Decoracion" instance=ExtResource("r15")]
+transform = Transform3D(0.000000, 0.000000, -1.000000, 0.000000, 1.000000, 0.000000, 1.000000, 0.000000, 0.000000, 18.000000, 0.000000, 7.000000)
+
+[node name="Prop_11" parent="Decoracion" instance=ExtResource("r16")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -18.000000, 0.000000, -8.000000)
+
+[node name="Prop_12" parent="Decoracion" instance=ExtResource("r16")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 18.000000, 0.000000, -8.000000)
+
+[node name="Prop_13" parent="Decoracion" instance=ExtResource("r17")]
+transform = Transform3D(0.927184, 0.000000, 0.374607, 0.000000, 1.000000, 0.000000, -0.374607, 0.000000, 0.927184, -14.000000, 0.000000, 18.000000)
+
+[node name="Prop_14" parent="Decoracion" instance=ExtResource("r18")]
+transform = Transform3D(0.927184, 0.000000, -0.374607, 0.000000, 1.000000, 0.000000, 0.374607, 0.000000, 0.927184, 14.000000, 0.000000, 18.000000)
+
+[node name="Prop_15" parent="Decoracion" instance=ExtResource("r19")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -18.000000, 0.000000, 17.000000)
+
+[node name="Prop_16" parent="Decoracion" instance=ExtResource("r20")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 18.000000, 0.000000, 17.000000)
+
+[node name="Prop_17" parent="Decoracion" instance=ExtResource("r21")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -10.000000, 6.870000, -21.500000)
+
+[node name="Prop_18" parent="Decoracion" instance=ExtResource("r22")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 10.000000, 6.870000, -21.500000)
+
+[node name="Estatuas" type="Node3D" parent="."]
+
+[node name="Monumento_Encapsulado" parent="Estatuas" instance=ExtResource("r23")]
+transform = Transform3D(0.720000, 0.000000, 0.000000, 0.000000, 0.720000, 0.000000, 0.000000, 0.000000, 0.720000, 0.000000, -0.031840, -17.500000)
+
+[node name="Estatua_Noroeste" parent="Estatuas" instance=ExtResource("r24")]
+transform = Transform3D(0.325269, 0.000000, 0.325269, 0.000000, 0.460000, 0.000000, -0.325269, 0.000000, 0.325269, -13.000000, -0.000000, -13.000000)
+
+[node name="Estatua_Noreste" parent="Estatuas" instance=ExtResource("r24")]
+transform = Transform3D(0.325269, 0.000000, -0.325269, 0.000000, 0.460000, 0.000000, 0.325269, 0.000000, 0.325269, 13.000000, -0.000000, -13.000000)
+
+[node name="Estatua_Suroeste" parent="Estatuas" instance=ExtResource("r23")]
+transform = Transform3D(-0.311127, 0.000000, 0.311127, 0.000000, 0.440000, 0.000000, -0.311127, 0.000000, -0.311127, -14.500000, -0.019458, 13.500000)
+
+[node name="Estatua_Sureste" parent="Estatuas" instance=ExtResource("r25")]
+transform = Transform3D(-0.311127, 0.000000, -0.311127, 0.000000, 0.440000, 0.000000, 0.311127, 0.000000, -0.311127, 14.500000, -0.019458, 13.500000)
+
+[node name="Gargola_Noroeste" parent="Estatuas" instance=ExtResource("r26")]
+transform = Transform3D(0.254558, 0.000000, 0.254558, 0.000000, 0.360000, 0.000000, -0.254558, 0.000000, 0.254558, -18.000000, 8.000000, -18.000000)
+
+[node name="Gargola_Noreste" parent="Estatuas" instance=ExtResource("r26")]
+transform = Transform3D(0.254558, 0.000000, -0.254558, 0.000000, 0.360000, 0.000000, 0.254558, 0.000000, 0.254558, 18.000000, 8.000000, -18.000000)
+
+[node name="Lapida_Oeste" parent="Estatuas" instance=ExtResource("r27")]
+transform = Transform3D(0.000000, 0.000000, 0.400000, 0.000000, 0.400000, 0.000000, -0.400000, 0.000000, 0.000000, -17.000000, -0.020635, 5.000000)
+
+[node name="Lapida_Este" parent="Estatuas" instance=ExtResource("r28")]
+transform = Transform3D(0.000000, 0.000000, -0.400000, 0.000000, 0.400000, 0.000000, 0.400000, 0.000000, 0.000000, 17.000000, -0.020635, 5.000000)
+
+[node name="Neon_Oeste" parent="Decoracion" instance=ExtResource("r29")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -8.000000, 4.800000, -19.850000)
+
+[node name="Neon_Este" parent="Decoracion" instance=ExtResource("r30")]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 8.000000, 4.800000, -19.850000)
+
+[node name="Iluminacion" type="Node3D" parent="."]
+
+[node name="Luz_0" type="OmniLight3D" parent="Iluminacion"]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -14.000000, 5.000000, -14.000000)
+light_color = Color(0.3000, 0.5500, 1.0000, 1.0000)
+light_energy = 1.8
+omni_range = 13.0
+omni_attenuation = 1.0
+shadow_enabled = false
+
+[node name="Luz_1" type="OmniLight3D" parent="Iluminacion"]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 14.000000, 5.000000, -14.000000)
+light_color = Color(0.3000, 0.5500, 1.0000, 1.0000)
+light_energy = 1.8
+omni_range = 13.0
+omni_attenuation = 1.0
+shadow_enabled = false
+
+[node name="Luz_2" type="OmniLight3D" parent="Iluminacion"]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -14.000000, 5.000000, 14.000000)
+light_color = Color(0.4200, 0.6200, 1.0000, 1.0000)
+light_energy = 1.5
+omni_range = 12.0
+omni_attenuation = 1.0
+shadow_enabled = false
+
+[node name="Luz_3" type="OmniLight3D" parent="Iluminacion"]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 14.000000, 5.000000, 14.000000)
+light_color = Color(0.4200, 0.6200, 1.0000, 1.0000)
+light_energy = 1.5
+omni_range = 12.0
+omni_attenuation = 1.0
+shadow_enabled = false
+
+[node name="Luz_4" type="OmniLight3D" parent="Iluminacion"]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, -8.000000, 4.600000, -18.000000)
+light_color = Color(0.8500, 0.2800, 1.0000, 1.0000)
+light_energy = 2.6
+omni_range = 12.0
+omni_attenuation = 1.0
+shadow_enabled = false
+
+[node name="Luz_5" type="OmniLight3D" parent="Iluminacion"]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 8.000000, 4.600000, -18.000000)
+light_color = Color(0.2500, 0.9000, 1.0000, 1.0000)
+light_energy = 2.6
+omni_range = 12.0
+omni_attenuation = 1.0
+shadow_enabled = false
+
+[node name="Luz_6" type="OmniLight3D" parent="Iluminacion"]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 5.200000, -16.500000)
+light_color = Color(0.3000, 0.4500, 1.0000, 1.0000)
+light_energy = 2.0
+omni_range = 10.0
+omni_attenuation = 1.0
+shadow_enabled = false
+
+[node name="Puntos" type="Node3D" parent="."]
+
+[node name="InicioJugador" type="Marker3D" parent="Puntos"]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 9.500000)
+
+[node name="AparicionJefe" type="Marker3D" parent="Puntos"]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, -7.000000)
+
+[node name="RedSeguridad" type="StaticBody3D" parent="."]
+transform = Transform3D(1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, -7.000000, 0.000000)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedSeguridad"]
+shape = SubResource("Caja_Arena_Asesino")

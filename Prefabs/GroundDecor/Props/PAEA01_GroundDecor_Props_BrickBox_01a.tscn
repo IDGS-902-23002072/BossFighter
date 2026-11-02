@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_GroundDecor_Props_BrickBox_01a.glb" id="1"]
+
+[node name="PAEA01_GroundDecor_Props_BrickBox_01a" instance=ExtResource("1")]

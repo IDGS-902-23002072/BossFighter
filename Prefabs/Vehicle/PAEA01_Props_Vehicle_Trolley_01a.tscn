@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_Props_Vehicle_Trolley_01a.glb" id="1"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_TechRoom_plank_01a.glb" id="2"]
+
+[node name="PAEA01_Props_Vehicle_Trolley_01a" type="Node3D"]
+
+[node name="PAEA01_Props_Vehicle_Trolley_01a" parent="." instance=ExtResource("1")]
+[node name="PAEA01_TechRoom_plank_01a_PRE (2)" parent="." instance=ExtResource("2")]
+transform = Transform3D(-0.000003, -0.000006, 1, 0, -1, -0.000006, 1.1269, 0, 0.000003, 1.443981, 1.089, -0.011)
+
+[node name="PAEA01_TechRoom_plank_01a_PRE" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.000003, -0, 1, 0, 1, 0, -1.1269, 0, 0.000003, 2.068981, 1.089, -0.011)
+
+[node name="PAEA01_TechRoom_plank_01a_PRE (3)" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.000003, -0, 1.1933, 0, 1, 0, -1.1269, 0, 0.000004, 1.083981, 1.089, -0.011)
+
+[node name="PAEA01_TechRoom_plank_01a_PRE (1)" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.000003, 0, -1, 0, 1, 0, 1.1269, -0, 0.000003, 1.758984, 1.089, -0.011)
+
+[node name="PAEA01_TechRoom_plank_01a_PRE (4)" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.00001, -0.000006, 1.1933, -0, -1, -0.000007, 1.1269, -0, -0.000011, 0.711983, 1.089, -0.011)
+
+[node name="PAEA01_TechRoom_plank_01a_PRE (5)" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.000003, 0, -1, 0, 1, 0, 1.1269, -0, 0.000003, 0.363983, 1.089, -0.011)

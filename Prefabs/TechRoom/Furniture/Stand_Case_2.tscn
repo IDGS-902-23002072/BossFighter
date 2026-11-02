@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_TechRoom_Furniture_standCase_01c.glb" id="1"]
+[ext_resource type="Material" path="res://Materials/Metro_new.tres" id="2"]
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_TechRoom_Furniture_Door_standCase_01b.glb" id="3"]
+
+[node name="Stand Casse_2" type="Node3D"]
+
+[node name="PAEA01_TechRoom_Furniture_standCasse_01c" parent="." instance=ExtResource("1")]
+
+[node name="PAEA01_TechRoom_Furniture_standCasse_01c" parent="PAEA01_TechRoom_Furniture_standCasse_01c" index="0"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="CollisionShape3D" parent="PAEA01_TechRoom_Furniture_standCasse_01c/PAEA01_TechRoom_Furniture_standCasse_01c/StaticBody3D" index="0"]
+disabled = true
+
+[node name="Doors" parent="." instance=ExtResource("3")]
+transform = Transform3D(1, 0, -0, 0, 1, 0, 0, -0, 1, 0.488, 0, 0.385)
+
+[node name="PAEA01_TechRoom_Furniture_Door_standCasse_01b" parent="Doors" index="0"]
+surface_material_override/0 = ExtResource("2")

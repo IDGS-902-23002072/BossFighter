@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Props/PAEA01_GroundDecor_Gate_02a.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Props/PAEA01_GroundDecor_Gate_02b.tscn" id="2"]
+
+[node name="PAEA01_GroundDecor_Gate_02a_COMP" type="Node3D"]
+
+[node name="PAEA01_GroundDecor_Gate_02a_PRE (1)" parent="." instance=ExtResource("1")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, 1.323, 0, 0.000015)
+
+[node name="PAEA01_GroundDecor_Gate_02b_PRE (1)" parent="." instance=ExtResource("2")]
+transform = Transform3D(1, -0, 0, 0, 1, 0, -0, 0, 1, -1.95, 0, 0.000015)

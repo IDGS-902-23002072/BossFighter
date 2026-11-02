@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_TechRoom_Frame_1a.glb" id="1"]
+[ext_resource type="Material" path="res://Materials/Metro_old.tres" id="2"]
+
+[node name="PAEA01_TechRoom_Frame_1a" instance=ExtResource("1")]
+
+[node name="PAEA01_TechRoom_Frame_1a" parent="." index="0"]
+surface_material_override/0 = ExtResource("2")

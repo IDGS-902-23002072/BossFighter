@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Pipe/PAEA01_WallDecor_Pipe_Corner_01a.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Prefabs/WallDecor/Pipe/PAEA01_WallDecor_Pipe_Seam_01a.tscn" id="2"]
+
+[node name="PAEA01_WallDecor_Pipe_Seam_02corner" type="Node3D"]
+
+[node name="PAEA01_WallDecor_Pipe_Corner_01a_PRE2 (1)" parent="." instance=ExtResource("1")]
+transform = Transform3D(-1, -0.000002, -0.000004, 0.000002, -1, 0.000002, -0.000004, 0.000002, 1, 4.799, -0.013, 0.78)
+
+[node name="PAEA01_WallDecor_Pipe_Seam_01a_PRE2 (7)" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.000009, 0.000008, -1, 0.000002, 1, 0.000008, 1, -0.000002, 0.000009, 6.07, 0.05, -4)
+
+[node name="PAEA01_WallDecor_Pipe_Seam_01a_PRE2 (8)" parent="." instance=ExtResource("2")]
+transform = Transform3D(1, -0.000012, -0.000006, -0.000012, -1, 0.000006, -0.000006, -0.000006, -1, -0, -0, 1.93)

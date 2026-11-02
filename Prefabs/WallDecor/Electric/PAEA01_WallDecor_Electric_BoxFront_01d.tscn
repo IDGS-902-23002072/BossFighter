@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Meshes/PAEA01_WallDecor_Electric_BoxFront_01d.glb" id="1"]
+
+[node name="PAEA01_WallDecor_Electric_BoxFront_01d" instance=ExtResource("1")]

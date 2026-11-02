@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://Prefabs/Ground/Roof/Blue/PAEA01_Ground_Roof_Seam_01a.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Prefabs/Arch/Wall/FPS/Wall/PAEA01_FPS_Wall_CornerOutside_01a.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Prefabs/Arch/Column/PAEA01_Arch_Wall_Column_01b.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Prefabs/Arch/Wall/FPS/Wall/PAEA01_FPS_Wall_Main_01a.tscn" id="4"]
+
+[node name="PAEA01_FPS_Wall_Main_01B_Comp" type="Node3D"]
+
+[node name="PAEA01_Ground_Roof_Seam_01a_PRE2 (85)" parent="." instance=ExtResource("1")]
+transform = Transform3D(-0.000004, 0, 1, 0, 1, -0, -1, 0, -0.000004, -2.429703, 0.000209, 0.788704)
+
+[node name="PAEA01_FPS_Wall_CornerOutside_01a_PRE2 (14)" parent="." instance=ExtResource("2")]
+transform = Transform3D(1, 0, -0, -0, 1, -0.000004, 0, 0.000004, 1, -2.427658, -0.000017, -9.211937)
+
+[node name="PAEA01_Arch_Wall_Column_01b_PRE2 (3)" parent="." instance=ExtResource("3")]
+transform = Transform3D(0, -0, -1, -0.000004, 1, -0, 1, 0.000004, 0, 2.356308, 0.000009, -4.35125)
+
+[node name="PAEA01_FPS_Wall_CornerOutside_01a_PRE2 (24)" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.000003, -0.000004, -1, -0, 1, -0.000004, 1, 0, 0.000003, -2.427658, -0.000117, 10.788063)
+
+[node name="PAEA01_Arch_Wall_Column_01b_PRE2 (4)" parent="." instance=ExtResource("3")]
+transform = Transform3D(-1, -0.000004, -0.000003, -0.000004, 1, -0, 0.000003, 0, -1, 2.356346, 0.000008, 6.198753)
+
+[node name="PAEA01_FPS_Wall_Main_01a_PRE2 (17)" parent="." instance=ExtResource("4")]
+transform = Transform3D(-0.000001, 0, -1, 0, 1, 0, 1, -0, -0.000001, 2.572296, -0.000092, -4.212295)

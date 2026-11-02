@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://Prefabs/TechRoom/Props/PAEA01_TechRoom_Props_Book_01a.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Prefabs/TechRoom/Props/PAEA01_TechRoom_Props_Book_01b.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Prefabs/TechRoom/Props/PAEA01_TechRoom_Props_Book_01d.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Prefabs/TechRoom/Props/PAEA01_TechRoom_Props_Book_01c.tscn" id="4"]
+
+[node name="PAEA01_Books_Comp_01b" type="Node3D"]
+
+[node name="PAEA01_TechRoom_Props_Book_01a_PRE" parent="." instance=ExtResource("1")]
+transform = Transform3D(0.000003, 0, -1, 0, 1, 0, 1, -0, 0.000003, -0.040001, 0.32, 0.484001)
+
+[node name="PAEA01_TechRoom_Props_Book_01b_PRE" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.000003, 0, -1, 0.14591, 0.989298, 0, 0.989298, -0.14591, 0.000003, 0.030045, 0.361888, -0.113)
+
+[node name="PAEA01_TechRoom_Props_Book_01d_PRE" parent="." instance=ExtResource("3")]
+transform = Transform3D(0.000003, 0, -1, 0.14591, 0.989298, 0, 0.989298, -0.14591, 0.000003, -0.014381, 0.434888, -0.379257)
+
+[node name="PAEA01_TechRoom_Props_Book_01c_PRE" parent="." instance=ExtResource("4")]
+transform = Transform3D(0.000003, 0, -1, 0.14591, 0.989298, 0, 0.989298, -0.14591, 0.000003, 0.031647, 0.363888, 0.076)
+
+[node name="PAEA01_TechRoom_Props_Book_01b_PRE_2" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.000003, 0, -1, 0.14591, 0.989298, 0, 0.989298, -0.14591, 0.000003, -0.047318, 0.365888, 0.225)

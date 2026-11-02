@@ -1,12 +1,12 @@
 
 extends CharacterBody3D
 
-@export var speed: float = 6.0
-@export var jump_force: float = 7.0
+@export var speed: float = 7.0
+@export var jump_force: float = 7.5
 @export var gravity: float = 20.0
 
-@export var attack_damage: float = 25.0
-@export var attack_range: float = 2.5
+@export var attack_damage: float = 40.0
+@export var attack_range: float = 2.8
 
 @export var dodge_speed: float = 12.0
 @export var dodge_duration: float = 0.35
@@ -22,8 +22,16 @@ extends CharacterBody3D
 @export var attack_animation_speed: float = 4.0
 
 @onready var animation_player: AnimationPlayer = $girl/AnimationPlayer
+@onready var head: Node3D = $Head
+@onready var camera_fps: Camera3D = $Head/CameraFPS
+
+const MOUSE_SENSITIVITY := 0.003
+const VERTICAL_LIMIT := 80.0
 
 var is_dodging: bool = false
+var first_person: bool = true
+
+var active_buffs := {}
 var dodge_timer: float = 0.0
 var dodge_cooldown_timer: float = 0.0
 var dodge_direction := Vector3.ZERO
@@ -50,6 +58,137 @@ func _ready() -> void:
 		health.died.connect(_on_player_died)
 
 	_play_animation(idle_animation)
+
+	# Asegura que la cámara FPS empiece desactivada.
+	if camera_fps:
+		camera_fps.current = false
+
+
+func _process(delta: float) -> void:
+	# Gestiona buffs temporales sin acumularse.
+	var to_remove: Array = []
+	for stat in active_buffs.keys():
+		active_buffs[stat]["time"] -= delta
+		if active_buffs[stat]["time"] <= 0.0:
+			to_remove.append(stat)
+
+	for stat in to_remove:
+		var amount: float = active_buffs[stat]["amount"]
+		if stat == "damage":
+			attack_damage -= amount
+		elif stat == "speed":
+			speed -= amount
+		active_buffs.erase(stat)
+
+
+func heal(amount: float) -> void:
+	var health = get_node_or_null("HealthComponent")
+	if health:
+		health.current_health = minf(
+			health.current_health + amount, health.max_health
+		)
+		health.health_changed.emit(health.current_health, health.max_health)
+
+
+func apply_temp_buff(stat: String, amount: float, duration: float) -> void:
+	# Si ya está activo, solo refresca el tiempo (no se acumula).
+	if active_buffs.has(stat):
+		active_buffs[stat]["time"] = duration
+		return
+
+	active_buffs[stat] = {"amount": amount, "time": duration}
+	if stat == "damage":
+		attack_damage += amount
+	elif stat == "speed":
+		speed += amount
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("toggle_camera"):
+		first_person = not first_person
+		_apply_camera_mode()
+
+	# Control de vista con mouse (estilo FPS), solo en primera persona.
+	if not first_person:
+		return
+
+	if not (event is InputEventMouseMotion):
+		if event.is_action_pressed("ui_cancel"):
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		elif event is InputEventMouseButton and event.pressed:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		return
+
+	if Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
+		return
+
+	rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
+	head.rotation.x -= event.relative.y * MOUSE_SENSITIVITY
+	var limite := deg_to_rad(VERTICAL_LIMIT)
+	head.rotation.x = clamp(head.rotation.x, -limite, limite)
+
+	# Mantén la dirección de ataque alineada con la vista.
+	facing_direction = -head.global_transform.basis.z
+	facing_direction.y = 0.0
+	if facing_direction.length() > 0.0:
+		facing_direction = facing_direction.normalized()
+
+
+func _apply_camera_mode() -> void:
+	var arena_cam := _find_arena_camera()
+
+	if arena_cam:
+		arena_cam.current = not first_person
+
+	if camera_fps:
+		camera_fps.current = first_person
+
+	if first_person:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	else:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+
+func _find_arena_camera() -> Camera3D:
+	var gm := get_tree().get_first_node_in_group("game_manager")
+	if gm and "current_camera" in gm and gm.current_camera:
+		return gm.current_camera as Camera3D
+
+	for node in get_tree().get_nodes_in_group("arena_camera"):
+		if node is Camera3D:
+			return node as Camera3D
+
+	# Búsqueda por nombre como último recurso.
+	for node in get_tree().get_nodes_in_group(""):
+		pass
+
+	var root := get_tree().current_scene
+	if root:
+		return _find_camera_by_name(root, "CamaraVista")
+	return null
+
+
+func _find_camera_by_name(node: Node, target: String) -> Camera3D:
+	if node.name == target and node is Camera3D:
+		return node as Camera3D
+	for child in node.get_children():
+		var found := _find_camera_by_name(child, target)
+		if found:
+			return found
+	return null
+
+
+func set_camera_mode(fp: bool, arena_cam: Camera3D) -> void:
+	first_person = fp
+	if arena_cam:
+		arena_cam.current = not fp
+	if camera_fps:
+		camera_fps.current = fp
+
+	if fp:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	else:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
 func _physics_process(delta: float) -> void:
@@ -83,17 +222,17 @@ func _physics_process(delta: float) -> void:
 			if health:
 				health.set_invulnerable(false)
 
-	# Movimiento normal.
+	# Movimiento normal (relativo a la vista).
 	else:
-		var input_x := Input.get_axis(
-			"move_left", "move_right"
-		)
-		var input_z := Input.get_axis(
+		var input_vector := Input.get_vector(
+			"move_left", "move_right",
 			"move_forward", "move_back"
 		)
 
-		var direction := Vector3(
-			input_x, 0.0, input_z
+		var direction := (
+			transform.basis * Vector3(
+				input_vector.x, 0.0, input_vector.y
+			)
 		).normalized()
 
 		if direction.length() > 0.0:
@@ -116,6 +255,8 @@ func _physics_process(delta: float) -> void:
 
 	# Aplicar movimiento y actualizar colisiones.
 	move_and_slide()
+
+	# La cámara FPS se mantiene como hija de Head; no se sobrescribe aquí.
 
 	# Al aterrizar, permitir que la animación de suelo
 	# sustituya a Jump en este mismo fotograma.
@@ -192,6 +333,8 @@ func attack() -> void:
 	)
 
 	print("¡Ataque!")
+	if has_node("/root/SoundManager"):
+		get_node("/root/SoundManager").play_tone(660.0, 0.08, -12.0)
 
 	# Comprobar enemigos en alcance y delante del jugador.
 	for enemy in get_tree().get_nodes_in_group("enemies"):

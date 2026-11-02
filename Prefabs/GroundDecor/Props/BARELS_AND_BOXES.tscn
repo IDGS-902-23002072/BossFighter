@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Fence/PAEA01_GroundDecor_Fence_criscross_01b.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Props/PAEA01_GroundDecor_Props_Box_01a.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Props/PAEA01_GroundDecor_Props_Barrel_01a.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Wall/PAEA01_GroundDecor_Wall_broken_01c.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Prefabs/GroundDecor/Wall/PAEA01_GroundDecor_Wall_broken_01b.tscn" id="5"]
+
+[node name="BARELS_AND_BOXES" type="Node3D"]
+
+[node name="PAEA01_GroundDecor_Fence_criscross_01b_PRE2 (2)" parent="." instance=ExtResource("1")]
+transform = Transform3D(0.21004, -0, -0.977693, 0.977693, 0, 0.21004, -0, -1, 0, 0.811371, 0.841987, -1.662743)
+
+[node name="PAEA01_GroundDecor_Props_Box_01a_PRE2 (12)" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.262052, 0, -1.389484, 0, 1, 0, 1.389484, -0, 0.262052, -1.348, -1, -1.812)
+
+[node name="PAEA01_GroundDecor_Props_Barrel_01a_PRE2 (24)" parent="." instance=ExtResource("3")]
+transform = Transform3D(-0.552532, 0, 0.833491, 0, 1, -0, -0.833491, 0, -0.552532, 0.166382, -0.927714, 0.305256)
+
+[node name="PAEA01_GroundDecor_Props_Barrel_01a_PRE2 (23)" parent="." instance=ExtResource("3")]
+transform = Transform3D(-0.993139, 0, 0.116941, 0, 1, -0, -0.116941, 0, -0.993139, -0.039627, -0.927714, 2.24025)
+
+[node name="PAEA01_GroundDecor_Props_Barrel_01a_PRE2 (22)" parent="." instance=ExtResource("3")]
+transform = Transform3D(0.507308, -0.070877, -0.858846, -0.090314, 0.986751, -0.134779, 0.85702, 0.14594, 0.494186, 0.166367, -0.211, -3.700745)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01c_PRE2 (4)" parent="." instance=ExtResource("4")]
+transform = Transform3D(0.000004, -1, 0, -0.000004, -0, -1, 1, 0.000004, -0.000004, 1.615387, 0.695734, -9.364174)
+
+[node name="PAEA01_GroundDecor_Props_Box_01a_PRE2 (13)" parent="." instance=ExtResource("2")]
+transform = Transform3D(0, 0, -1.413979, 0, 1, 0, 1.413979, -0, 0, -2.173325, -0.158348, -5.98687)
+
+[node name="PAEA01_GroundDecor_Props_Barrel_01a_PRE2 (17)" parent="." instance=ExtResource("3")]
+transform = Transform3D(0.999997, 0, -0.002373, 0, 1, 0, 0.002373, -0, 0.999997, 0.171387, -0.927714, 6.423775)
+
+[node name="PAEA01_GroundDecor_Props_Barrel_01a_PRE2 (21)" parent="." instance=ExtResource("3")]
+transform = Transform3D(0.999997, 0, -0.002373, 0, 1, 0, 0.002373, -0, 0.999997, 0.166367, -0.927714, -1.704239)
+
+[node name="PAEA01_GroundDecor_Props_Barrel_01a_PRE2 (19)" parent="." instance=ExtResource("3")]
+transform = Transform3D(-0.993139, 0, 0.116941, 0, 1, -0, -0.116941, 0, -0.993139, 0.171387, -0.927714, 10.307255)
+
+[node name="PAEA01_GroundDecor_Props_Barrel_01a_PRE2 (20)" parent="." instance=ExtResource("3")]
+transform = Transform3D(-0.552532, 0, 0.833491, 0, 1, -0, -0.833491, 0, -0.552532, -0.438629, -0.927714, 8.347267)
+
+[node name="PAEA01_GroundDecor_Wall_broken_01b_PRE2 (9)" parent="." instance=ExtResource("5")]
+transform = Transform3D(0, 0, -1.239157, 0, 1, 0, 1, -0, 0, 0.20137, -0.958014, -5.832741)
+
+[node name="PAEA01_GroundDecor_Props_Barrel_01a_PRE2 (18)" parent="." instance=ExtResource("3")]
+transform = Transform3D(0, -1, -0, 0.120048, 0, -0.992769, 0.992769, 0, 0.120048, 0.171371, -0.225014, 4.427261)
+
+[node name="PAEA01_GroundDecor_Props_Box_01a_PRE2 (14)" parent="." instance=ExtResource("2")]
+transform = Transform3D(0, 0, -1.413979, 0, 1, 0, 1.413979, -0, 0, -1.348007, -1, -0.312565)
+
+[node name="PAEA01_GroundDecor_Props_Box_01a_PRE2 (15)" parent="." instance=ExtResource("2")]
+transform = Transform3D(-1.371279, 0, 0.344863, 0, 1, -0, -0.344863, 0, -1.371279, 0.121368, 0.749, -1.760742)
