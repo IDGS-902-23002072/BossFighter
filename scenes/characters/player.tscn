@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://do51ss3iywy38"]
+
+[ext_resource type="Script" uid="uid://bj00o35xe3xji" path="res://scripts/combat/player.gd" id="1_rp718"]
+[ext_resource type="PackedScene" uid="uid://bsblocmmfvoo3" path="res://scenes/characters/girl.tscn" id="2_76oj4"]
+[ext_resource type="Script" uid="uid://bvjwsujx0sc5d" path="res://scripts/combat/health_component.gd" id="2_yewv4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_innqe"]
+radius = 0.2
+height = 1.6
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pg0n5"]
+height = 1.8
+
+[node name="Player" type="CharacterBody3D" unique_id=1251844898]
+script = ExtResource("1_rp718")
+
+[node name="girl" parent="." unique_id=378494115 instance=ExtResource("2_76oj4")]
+transform = Transform3D(-0.9999995, 0, -0.0009829123, 0, 1, 0, 0.0009829123, 0, -0.9999995, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1767329109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("CapsuleShape3D_innqe")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1058064404]
+visible = false
+mesh = SubResource("CapsuleMesh_pg0n5")
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1171227598]
+script = ExtResource("2_yewv4")

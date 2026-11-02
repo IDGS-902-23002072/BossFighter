@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bth75ybt1gg1s"]
+
+[ext_resource type="Script" uid="uid://bvjwsujx0sc5d" path="res://scripts/combat/health_component.gd" id="1_7jb55"]
+[ext_resource type="Script" uid="uid://cm7rhjecpaiim" path="res://scripts/combat/enemy.gd" id="1_fulqv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pg0n5"]
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_vr6xw"]
+height = 1.8
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1322501214]
+script = ExtResource("1_fulqv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1357628592]
+shape = SubResource("CapsuleShape3D_pg0n5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=991774282]
+mesh = SubResource("CapsuleMesh_vr6xw")
+
+[node name="HealthComponent" type="Node" parent="." unique_id=226891087]
+script = ExtResource("1_7jb55")
