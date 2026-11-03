@@ -350,9 +350,9 @@ func _create_end_screen() -> void:
 	var panel := PanelContainer.new()
 	panel.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 	panel.offset_left = -180
-	panel.offset_top = -100
+	panel.offset_top = -140
 	panel.offset_right = 180
-	panel.offset_bottom = 100
+	panel.offset_bottom = 140
 	end_overlay.add_child(panel)
 
 	var container := VBoxContainer.new()
@@ -372,6 +372,17 @@ func _create_end_screen() -> void:
 	restart_button.pressed.connect(_on_restart_pressed)
 	container.add_child(restart_button)
 
+	var menu_button := Button.new()
+	menu_button.text = "MENÚ PRINCIPAL"
+	menu_button.custom_minimum_size = Vector2(220, 45)
+	menu_button.pressed.connect(_on_menu_pressed)
+	container.add_child(menu_button)
+
 
 func _on_restart_pressed() -> void:
 	get_tree().reload_current_scene()
+
+
+func _on_menu_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
