@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/combat/minion.gd" id="1_minion"]
 [ext_resource type="Script" path="res://scripts/combat/health_component.gd" id="2_health"]
+[ext_resource type="PackedScene" path="res://addons/cogito/CogitoNPC/cogito_npc_visual.tscn" id="3_cogito"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_minion"]
 size = Vector3(0.6, 1.2, 0.6)
@@ -19,6 +20,14 @@ shape = SubResource("BoxShape3D_minion")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=9990003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 mesh = SubResource("BoxMesh_minion")
+visible = false
+
+[node name="Mannequin" parent="." instance=ExtResource("3_cogito")]
+transform = Transform3D(-0.65, 0, 0, 0, 0.65, 0, 0, 0, -0.65, 0, 0, 0)
+script = null
+process_mode = 4
+
+
 
 [node name="HealthComponent" type="Node" parent="." unique_id=9990004]
 script = ExtResource("2_health")

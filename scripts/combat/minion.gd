@@ -8,6 +8,7 @@ extends CharacterBody3D
 @export var max_health_value: float = 20.0
 
 @onready var health = $HealthComponent
+@onready var anim_player = $Mannequin/AnimationPlayer
 
 var player: CharacterBody3D
 var attack_cooldown: float = 0.0
@@ -35,6 +36,15 @@ func _ready() -> void:
 		mat.emission = Color(0.1, 0.2, 0.05)
 		mesh.material_override = mat
 
+	# Animaciones.
+	if anim_player:
+		anim_player.process_mode = Node.PROCESS_MODE_ALWAYS
+		anim_player.play("Idle")
+
+	var state_chart := get_node_or_null("Mannequin/StateChart")
+	if state_chart:
+		state_chart.queue_free()
+
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -55,11 +65,15 @@ func _physics_process(delta: float) -> void:
 		var direction := offset.normalized()
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
+		_play_anim("Jog_Fwd")
 	else:
 		velocity.x = 0.0
 		velocity.z = 0.0
 		if attack_cooldown <= 0.0:
 			_try_damage_player()
+			_play_anim("Hit_Chest")
+		else:
+			_play_anim("Idle")
 
 	move_and_slide()
 
@@ -74,7 +88,15 @@ func _try_damage_player() -> void:
 	attack_cooldown = attack_cooldown_time
 
 
+func _play_anim(name: String) -> void:
+	if anim_player and anim_player.current_animation != name:
+		anim_player.play(name, 0.15)
+
+
 func _on_died() -> void:
+	if anim_player:
+		anim_player.play("Death01", 0.2)
 	if has_node("/root/SoundManager"):
-		get_node("/root/SoundManager").play_tone(330.0, 0.12, -10.0)
+		get_node("/root/SoundManager").play_sound("res://addons/cogito/Assets/Audio/Kenney/rockHit2.ogg", -8.0)
+	await get_tree().create_timer(1.0).timeout
 	queue_free()

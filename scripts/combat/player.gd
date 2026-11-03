@@ -29,9 +29,10 @@ const MOUSE_SENSITIVITY := 0.003
 const VERTICAL_LIMIT := 80.0
 
 var is_dodging: bool = false
-var first_person: bool = true
+var first_person: bool = false
 
 var active_buffs := {}
+var previous_health: float = 0.0
 var dodge_timer: float = 0.0
 var dodge_cooldown_timer: float = 0.0
 var dodge_direction := Vector3.ZERO
@@ -56,6 +57,8 @@ func _ready() -> void:
 	var health = get_node_or_null("HealthComponent")
 	if health:
 		health.died.connect(_on_player_died)
+		health.health_changed.connect(_on_health_changed)
+		previous_health = health.current_health
 
 	_play_animation(idle_animation)
 
@@ -101,6 +104,12 @@ func apply_temp_buff(stat: String, amount: float, duration: float) -> void:
 		attack_damage += amount
 	elif stat == "speed":
 		speed += amount
+
+
+func _on_health_changed(current: float, maximum: float) -> void:
+	if current < previous_health and has_node("/root/SoundManager"):
+		get_node("/root/SoundManager").play_sound("res://addons/cogito/Assets/Audio/Kenney/error_004.ogg", -8.0)
+	previous_health = current
 
 
 func _input(event: InputEvent) -> void:
@@ -334,7 +343,7 @@ func attack() -> void:
 
 	print("¡Ataque!")
 	if has_node("/root/SoundManager"):
-		get_node("/root/SoundManager").play_tone(660.0, 0.08, -12.0)
+		get_node("/root/SoundManager").play_sound("res://addons/cogito/Assets/Audio/Kenney/woosh1.ogg", -10.0)
 
 	# Comprobar enemigos en alcance y delante del jugador.
 	for enemy in get_tree().get_nodes_in_group("enemies"):

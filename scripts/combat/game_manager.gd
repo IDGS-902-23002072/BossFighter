@@ -15,7 +15,7 @@ signal upgrades_offered(options: Array)
 @export var arena_scale := Vector3(1.5, 1.5, 1.5)
 
 @export var waves_per_stage: int = 3
-@export var base_minions_per_wave: int = 2
+@export var base_minions_per_wave: int = 3
 
 var current_boss_index: int = 0
 var game_over: bool = false
@@ -115,6 +115,8 @@ func _spawn_wave() -> void:
 	var count := base_minions_per_wave + (current_wave - 1) + current_boss_index
 	waves_progress.emit(current_wave, total_waves)
 	print("Oleada ", current_wave, " / ", total_waves, " con ", count, " enemigos")
+	if has_node("/root/SoundManager"):
+		get_node("/root/SoundManager").play_sound("res://addons/cogito/Assets/Audio/Kenney/doorOpen_1.ogg", -8.0)
 
 	var arena := current_arena
 	var center := Vector3.ZERO
@@ -126,9 +128,10 @@ func _spawn_wave() -> void:
 
 	minions_alive = count
 
-	var spawn_mage := (current_wave % 2 == 0) and mage_scene != null
-	if spawn_mage:
-		minions_alive += 1
+	var mage_count := 0
+	if mage_scene != null:
+		mage_count = 1 if current_wave < 3 else 2
+		minions_alive += mage_count
 
 	minions_remaining.emit(minions_alive)
 
@@ -157,16 +160,17 @@ func _spawn_wave() -> void:
 		if health and not health.died.is_connected(_on_minion_died):
 			health.died.connect(_on_minion_died)
 
-	# Mago a distancia en oleadas pares.
-	if spawn_mage and is_instance_valid(arena):
-		var mage = mage_scene.instantiate()
-		arena.add_child(mage)
-		var mage_center_marker := _get_marker(arena, "Puntos/AparicionJefe")
-		var mage_center := mage_center_marker.global_position if mage_center_marker else Vector3(0, 0, -6)
-		mage.global_position = mage_center + Vector3(randf_range(-4.0, 4.0), 0.0, randf_range(-4.0, 4.0))
-		var mage_health = mage.get_node_or_null("HealthComponent")
-		if mage_health and not mage_health.died.is_connected(_on_minion_died):
-			mage_health.died.connect(_on_minion_died)
+	# Magos a distancia.
+	if mage_count > 0 and is_instance_valid(arena):
+		for m in range(mage_count):
+			var mage = mage_scene.instantiate()
+			arena.add_child(mage)
+			var mage_center_marker := _get_marker(arena, "Puntos/AparicionJefe")
+			var mage_center := mage_center_marker.global_position if mage_center_marker else Vector3(0, 0, -6)
+			mage.global_position = mage_center + Vector3(randf_range(-4.0, 4.0), 0.0, randf_range(-4.0, 4.0))
+			var mage_health = mage.get_node_or_null("HealthComponent")
+			if mage_health and not mage_health.died.is_connected(_on_minion_died):
+				mage_health.died.connect(_on_minion_died)
 
 
 func _on_minion_died() -> void:
@@ -238,6 +242,8 @@ func _spawn_boss() -> void:
 	_spawn_buffs(1)
 
 	print("Comienza el jefe ", current_boss_index + 1)
+	if has_node("/root/SoundManager"):
+		get_node("/root/SoundManager").play_sound("res://addons/cogito/Assets/Audio/Kenney/phaserUp5.ogg", -6.0)
 
 
 func _on_boss_died() -> void:
@@ -319,6 +325,8 @@ func _heal_player() -> void:
 		health.current_health = health.max_health
 		health.health_changed.emit(health.current_health, health.max_health)
 		print("¡Jugador curado completamente!")
+		if has_node("/root/SoundManager"):
+			get_node("/root/SoundManager").play_sound("res://addons/cogito/Assets/Audio/Kenney/jingles-pizzicato_14.ogg", -8.0)
 
 
 func _pick_upgrade_options(count: int) -> Array:
@@ -369,6 +377,8 @@ func _load_arena(index: int) -> Node:
 	current_arena.scale = arena_scale
 	get_parent().add_child(current_arena)
 
+	_add_invisible_walls(current_arena)
+
 	# Registra la cámara del escenario.
 	current_camera = _find_camera_in_node(current_arena, "CamaraVista")
 	if current_camera:
@@ -389,6 +399,35 @@ func _find_camera_in_node(node: Node, target: String) -> Camera3D:
 		if found:
 			return found
 	return null
+
+
+func _add_invisible_walls(arena: Node) -> void:
+	if not is_instance_valid(arena):
+		return
+
+	var walls := StaticBody3D.new()
+	walls.name = "InvisibleWalls"
+	arena.add_child(walls)
+
+	var extent := 22.0
+	var height := 6.0
+
+	var sides := [
+		{"pos": Vector3(0, height * 0.5, -extent), "size": Vector3(extent * 2, height, 1)},
+		{"pos": Vector3(0, height * 0.5, extent), "size": Vector3(extent * 2, height, 1)},
+		{"pos": Vector3(-extent, height * 0.5, 0), "size": Vector3(1, height, extent * 2)},
+		{"pos": Vector3(extent, height * 0.5, 0), "size": Vector3(1, height, extent * 2)},
+	]
+
+	for side in sides:
+		var body := StaticBody3D.new()
+		var collision := CollisionShape3D.new()
+		var shape := BoxShape3D.new()
+		shape.size = side["size"]
+		collision.shape = shape
+		body.add_child(collision)
+		body.position = side["pos"]
+		walls.add_child(body)
 
 
 func _get_marker(arena: Node, path: String) -> Marker3D:

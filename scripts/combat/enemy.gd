@@ -15,11 +15,14 @@ enum BossType { GUERRERO, ASESINO, DESTRUCTOR }
 @export var speed: float = 3.0
 @export var gravity: float = 20.0
 @export var attack_range: float = 2.0
-@export var attack_damage: float = 15.0
+@export var attack_damage: float = 9.0
 @export var windup_time: float = 0.8
 @export var cooldown_time: float = 1.2
 
 @onready var health = $HealthComponent
+@onready var anim_player = $Mannequin/AnimationPlayer
+
+var previous_health: float = 0.0
 
 var player: CharacterBody3D
 var state: State = State.APPROACH
@@ -49,35 +52,45 @@ func _ready() -> void:
 		mat.emission_enabled = true
 		mat.emission = mat.albedo_color * 0.3
 		mesh.material_override = mat
+
+	if anim_player:
+		anim_player.process_mode = Node.PROCESS_MODE_ALWAYS
+		anim_player.play("Idle")
+
+	var state_chart := get_node_or_null("Mannequin/StateChart")
+	if state_chart:
+		state_chart.queue_free()
 	health.died.connect(_on_died)
+	health.health_changed.connect(_on_health_changed)
+	previous_health = health.current_health
 
 	player = get_tree().get_first_node_in_group("player") as CharacterBody3D
 
 func _configure_boss() -> void:
 	match boss_type:
 		BossType.GUERRERO:
-			speed = 2.6
-			attack_damage = 12.0
-			attack_range = 1.9
-			windup_time = 0.9
-			cooldown_time = 1.4
-			health.max_health = 80.0
+			speed = 3.2
+			attack_damage = 18.0
+			attack_range = 2.2
+			windup_time = 0.7
+			cooldown_time = 1.0
+			health.max_health = 140.0
 
 		BossType.ASESINO:
-			speed = 3.8
-			attack_damage = 16.0
-			attack_range = 2.0
-			windup_time = 0.6
-			cooldown_time = 1.0
-			health.max_health = 120.0
+			speed = 4.2
+			attack_damage = 24.0
+			attack_range = 2.4
+			windup_time = 0.45
+			cooldown_time = 0.7
+			health.max_health = 200.0
 
 		BossType.DESTRUCTOR:
-			speed = 3.0
-			attack_damage = 22.0
-			attack_range = 2.8
-			windup_time = 0.8
-			cooldown_time = 0.8
-			health.max_health = 180.0
+			speed = 3.4
+			attack_damage = 32.0
+			attack_range = 3.2
+			windup_time = 0.6
+			cooldown_time = 0.5
+			health.max_health = 320.0
 
 	health.current_health = health.max_health
 	health.health_changed.emit(health.current_health, health.max_health)
@@ -135,8 +148,10 @@ func _physics_process(delta: float) -> void:
 				var direction := offset.normalized()
 				velocity.x = direction.x * speed
 				velocity.z = direction.z * speed
+				_play_anim("Jog_Fwd")
 			else:
 				_stop_horizontal()
+				_play_anim("Idle")
 				state = State.WINDUP
 				state_timer = windup_time
 				_set_attack_warning(true)
@@ -144,12 +159,14 @@ func _physics_process(delta: float) -> void:
 
 		State.WINDUP:
 			_stop_horizontal()
+			_play_anim("Idle")
 			if state_timer <= 0.0:
 				_set_attack_warning(false)
 				state = State.ATTACK
 
 		State.ATTACK:
 			_stop_horizontal()
+			_play_anim("Sword_Attack")
 
 			match boss_type:
 				BossType.GUERRERO:
@@ -180,6 +197,7 @@ func _physics_process(delta: float) -> void:
 
 		State.COOLDOWN:
 			_stop_horizontal()
+			_play_anim("Idle")
 
 			if state_timer <= 0.0:
 				state = State.APPROACH
@@ -212,9 +230,23 @@ func _try_damage_player(max_distance: float, damage: float) -> void:
 		player_health.take_damage(damage)
 		print("¡El jefe golpeó al jugador!")
 
+func _on_health_changed(current: float, maximum: float) -> void:
+	if current < previous_health:
+		_play_anim("Hit_Chest")
+	previous_health = current
+
+
+func _play_anim(name: String) -> void:
+	if anim_player and anim_player.current_animation != name:
+		anim_player.play(name, 0.15)
+
+
 func _on_died() -> void:
 	print("¡Jefe derrotado!")
 	_set_attack_warning(false)
+	if anim_player:
+		anim_player.play("Death01", 0.2)
 	if has_node("/root/SoundManager"):
-		get_node("/root/SoundManager").play_tone(220.0, 0.35, -4.0)
+		get_node("/root/SoundManager").play_sound("res://addons/cogito/Assets/Audio/Kenney/explosion2.ogg", -4.0)
+	await get_tree().create_timer(1.0).timeout
 	queue_free()

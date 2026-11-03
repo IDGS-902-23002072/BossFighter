@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" path="res://scenes/arenas/Arena_Guerrero.tscn" id="6_guerrero"]
 [ext_resource type="PackedScene" path="res://scenes/arenas/Arena_Asesino.tscn" id="7_asesino"]
 [ext_resource type="PackedScene" path="res://scenes/arenas/Arena_Destructor.tscn" id="8_destructor"]
-[ext_resource type="PackedScene" path="res://scenes/characters/minion.tscn" id="9_minion"]
-[ext_resource type="PackedScene" path="res://scenes/characters/mage.tscn" id="10_mage"]
+[ext_resource type="PackedScene" uid="uid://minion0001" path="res://scenes/characters/minion.tscn" id="9_minion"]
+[ext_resource type="PackedScene" uid="uid://mage0001" path="res://scenes/characters/mage.tscn" id="10_mage"]
 
 [node name="Main" type="Node3D" unique_id=494663594]
 

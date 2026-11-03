@@ -1,7 +1,7 @@
 extends Area3D
 
 var direction := Vector3.FORWARD
-var speed := 12.0
+var speed := 20.0
 var damage := 10.0
 var lifetime := 4.0
 var timer := 0.0

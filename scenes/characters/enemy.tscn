@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bvjwsujx0sc5d" path="res://scripts/combat/health_component.gd" id="1_7jb55"]
 [ext_resource type="Script" uid="uid://cm7rhjecpaiim" path="res://scripts/combat/enemy.gd" id="1_fulqv"]
+[ext_resource type="PackedScene" uid="uid://dpsykoxm47xvp" path="res://addons/cogito/CogitoNPC/cogito_npc_visual.tscn" id="3_cogito"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pg0n5"]
 height = 1.8
@@ -16,7 +17,13 @@ script = ExtResource("1_fulqv")
 shape = SubResource("CapsuleShape3D_pg0n5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=991774282]
+visible = false
 mesh = SubResource("CapsuleMesh_vr6xw")
+
+[node name="Mannequin" parent="." unique_id=244066849 instance=ExtResource("3_cogito")]
+process_mode = 4
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+script = null
 
 [node name="HealthComponent" type="Node" parent="." unique_id=226891087]
 script = ExtResource("1_7jb55")

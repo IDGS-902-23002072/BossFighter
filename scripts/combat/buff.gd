@@ -74,6 +74,6 @@ func _on_body_entered(body: Node3D) -> void:
 				print("¡Buff de velocidad temporal recogido!")
 
 	if has_node("/root/SoundManager"):
-		get_node("/root/SoundManager").play_tone(880.0, 0.15, -6.0)
+		get_node("/root/SoundManager").play_sound("res://addons/cogito/Assets/Audio/Kenney/phaserUp5.ogg", -6.0)
 
 	queue_free()

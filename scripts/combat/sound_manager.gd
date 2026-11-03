@@ -1,5 +1,23 @@
 extends Node
 
+func play_sound(path: String, volume_db: float = -6.0) -> void:
+	var stream = load(path)
+	if stream == null:
+		return
+
+	var player := AudioStreamPlayer.new()
+	add_child(player)
+	player.stream = stream
+	player.volume_db = volume_db
+	player.play()
+
+	# Limpia el reproductor cuando termina.
+	if stream is AudioStream:
+		var length: float = stream.get_length()
+		await get_tree().create_timer(length + 0.1).timeout
+		player.queue_free()
+
+
 func play_tone(frequency: float = 440.0, duration: float = 0.12, volume_db: float = -8.0) -> void:
 	var player := AudioStreamPlayer.new()
 	add_child(player)

@@ -207,6 +207,8 @@ func _on_minions_remaining(count: int) -> void:
 
 func _on_upgrades_offered(options: Array) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	if has_node("/root/SoundManager"):
+		get_node("/root/SoundManager").play_sound("res://addons/cogito/Assets/Audio/Kenney/jingles-pizzicato_14.ogg", -6.0)
 	_show_upgrade_panel(options)
 
 
